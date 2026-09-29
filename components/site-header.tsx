@@ -23,7 +23,7 @@ export function SiteHeader() {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="sticky top-4 z-50 mx-auto flex w-[calc(100%-2rem)] max-w-[1142px] items-center justify-between gap-3 rounded-full border border-black/[0.04] bg-white/80 py-2 pr-2 pl-5 shadow-[0_8px_30px_-12px_rgba(0,15,220,0.15)] backdrop-blur-md sm:top-6 sm:pl-6"
     >
-      <nav className="flex min-w-0 items-center gap-1 overflow-x-auto">
+      <nav className="flex min-w-0 items-center gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {nav.links.map((link) => {
           const id = link.href.replace("#", "");
           const isActive = activeId === id;

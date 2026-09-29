@@ -20,10 +20,10 @@ export function ContactCtaSection() {
         <RevealItem>
           <p className="text-base text-white/90 sm:text-lg">{contactCta.subheading}</p>
         </RevealItem>
-        <RevealItem className="flex w-full flex-wrap items-center justify-center gap-3 pt-2 sm:w-auto">
+        <RevealItem className="flex w-full flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
           {contactCta.links.map((link) => {
             const className =
-              "flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5 sm:text-base";
+              "flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 sm:w-72 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5 sm:text-base";
             const content = (
               <>
                 <img src={asset(icons[link.icon])} alt="" width={20} height={20} />
