@@ -113,7 +113,7 @@ export function CaseGallery({ result }: { result: CaseResult }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-6"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-0 sm:bg-black/80 sm:p-6"
             onClick={() => setSelectedIndex(null)}
           >
             <button
@@ -123,7 +123,7 @@ export function CaseGallery({ result }: { result: CaseResult }) {
                 setSelectedIndex(null);
               }}
               aria-label="Закрыть"
-              className="absolute top-6 right-6 flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+              className="absolute top-4 right-4 z-10 flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
             >
               <X className="size-5" aria-hidden />
             </button>
@@ -135,7 +135,7 @@ export function CaseGallery({ result }: { result: CaseResult }) {
                 goPrev();
               }}
               aria-label="Предыдущий скриншот"
-              className="absolute left-4 flex size-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
+              className="absolute left-4 z-10 hidden size-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6 sm:flex"
             >
               <ChevronLeft className="size-6" aria-hidden />
             </button>
@@ -149,15 +149,25 @@ export function CaseGallery({ result }: { result: CaseResult }) {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="relative max-h-full max-w-4xl overflow-hidden rounded-2xl"
+                className="relative max-h-full max-w-4xl cursor-grab overflow-hidden active:cursor-grabbing sm:rounded-lg"
                 onClick={(e) => e.stopPropagation()}
+                // Свайп влево/вправо листает скриншоты (на телефоне стрелки скрыты).
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.5}
+                onDragEnd={(_, info) => {
+                  const swipe = info.offset.x + info.velocity.x * 0.2;
+                  if (swipe < -60) goNext();
+                  else if (swipe > 60) goPrev();
+                }}
               >
                 <Image
                   src={asset(selected.src)}
                   alt={selected.alt}
                   width={selected.width}
                   height={selected.height}
-                  className="h-auto max-h-[85vh] w-auto object-contain"
+                  draggable={false}
+                  className="h-auto max-h-[85vh] w-auto max-w-[100vw] object-contain sm:max-w-full"
                 />
               </motion.div>
             </AnimatePresence>
@@ -169,7 +179,7 @@ export function CaseGallery({ result }: { result: CaseResult }) {
                 goNext();
               }}
               aria-label="Следующий скриншот"
-              className="absolute right-4 flex size-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
+              className="absolute right-4 z-10 hidden size-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6 sm:flex"
             >
               <ChevronRight className="size-6" aria-hidden />
             </button>
