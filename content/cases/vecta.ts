@@ -6,9 +6,7 @@ export const vecta: CaseStudy = {
   backHref: "/#cases",
   title: "Vecta — беспилотное такси",
   subtitle: "Концепт B2B сервиса для инженеров беспилотного такси",
-  heroBackground: "linear-gradient(151deg, #000fdc 0%, #001580 100%)",
-  heroGlow:
-    "radial-gradient(circle at 30% 30%, rgba(100,160,255,0.35) 0%, rgba(100,160,255,0) 65%)",
+  heroBackground: "#000fdc",
   meta: {
     role: "UI/UX дизайнер",
     duration: "2 недели",
@@ -16,10 +14,10 @@ export const vecta: CaseStudy = {
     tools: ["Figma", "Miro"],
   },
   cover: {
-    src: "/cases/vecta/cover.jpg",
+    src: "/cases/vecta/cover.webp",
     alt: "Обложка кейса Vecta: дашборд мониторинга флота, карточка инцидента и мокап беспилотного автомобиля",
-    width: 904,
-    height: 388,
+    width: 2000,
+    height: 853,
   },
   callout: {
     title:
@@ -89,10 +87,10 @@ export const vecta: CaseStudy = {
         "Также в инциденте должно быть наглядное упоминание, если он поступил **от оператора:** такие инциденты будут валидироваться приоритетнее и требовать более быстрого реагирования.",
       ],
       image: {
-        src: "/cases/vecta/hypothesis-before-after.png",
+        src: "/cases/vecta/hypothesis-before-after.webp",
         alt: "До и после: карточка инцидента — было с текстовыми полями и чекбоксами, стало с быстрыми тег-действиями",
-        width: 866,
-        height: 468,
+        width: 2000,
+        height: 1087,
       },
     },
     {

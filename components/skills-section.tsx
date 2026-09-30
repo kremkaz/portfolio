@@ -2,7 +2,8 @@
 
 import { motion } from "motion/react";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
-import { skills } from "@/content/home";
+import { home } from "@/content/home";
+import type { Locale } from "@/lib/i18n";
 
 function ChipGroup({
   items,
@@ -33,7 +34,9 @@ function ChipGroup({
   );
 }
 
-export function SkillsSection() {
+export function SkillsSection({ locale }: { locale: Locale }) {
+  const { skills } = home[locale];
+
   return (
     <section id="skills" className="flex w-full scroll-mt-28 flex-col items-center gap-10">
       <RevealGroup className="flex w-full flex-col items-center gap-10">

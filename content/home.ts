@@ -1,3 +1,6 @@
+import type { Locale } from "@/lib/i18n";
+import { homeEn } from "./home.en";
+
 export const nav = {
   /** href — id секции на главной. «О себе» (#about) ведёт на самый верх главной. */
   links: [
@@ -109,3 +112,9 @@ export const footer = {
   contactsLabel: "Контакты",
   telegram: "t.me/kremka_zzz",
 };
+
+const homeRu = { nav, hero, cases, skills, email, contactCta, footer };
+export type HomeContent = typeof homeRu;
+
+/** Тексты главной по языкам; английская версия — в home.en.ts. */
+export const home: Record<Locale, HomeContent> = { ru: homeRu, en: homeEn };

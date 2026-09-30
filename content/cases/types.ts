@@ -65,10 +65,8 @@ export type CaseStudy = {
   backHref: string;
   title: string;
   subtitle: string;
-  /** CSS-фон шапки кейса (градиент). Цвета — из design-tokens.md, раздел «Шапка кейса». */
+  /** Цвет фона шапки кейса (сплошной, без градиента). Значения — design-tokens.md, «Шапка кейса». */
   heroBackground: string;
-  /** Необязательное свечение в правом верхнем углу шапки. */
-  heroGlow?: string;
   meta: CaseMeta;
   cover: CaseImage;
   callout?: CaseCalloutContent;

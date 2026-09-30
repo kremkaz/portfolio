@@ -1,7 +1,10 @@
 import { EmailLink } from "@/components/email-link";
-import { email, footer } from "@/content/home";
+import { home } from "@/content/home";
+import type { Locale } from "@/lib/i18n";
 
-export function SiteFooter() {
+export function SiteFooter({ locale }: { locale: Locale }) {
+  const { email, footer } = home[locale];
+
   return (
     <footer className="w-full bg-[#242B2F] px-6 py-10 text-white">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 sm:flex-row sm:justify-between">
@@ -10,7 +13,7 @@ export function SiteFooter() {
           <p className="text-[11px] font-medium tracking-widest text-white/35 uppercase">
             {footer.contactsLabel}
           </p>
-          <EmailLink className="text-sm text-white/55 transition-colors hover:text-white/80">
+          <EmailLink locale={locale} className="text-sm text-white/55 transition-colors hover:text-white/80">
             {email.address}
           </EmailLink>
           <a

@@ -1,6 +1,7 @@
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { EmailLink } from "@/components/email-link";
-import { contactCta } from "@/content/home";
+import { home } from "@/content/home";
+import type { Locale } from "@/lib/i18n";
 import { asset } from "@/lib/asset";
 
 const icons = {
@@ -8,7 +9,9 @@ const icons = {
   mail: "/home/icon-mail.svg",
 } as const;
 
-export function ContactCtaSection() {
+export function ContactCtaSection({ locale }: { locale: Locale }) {
+  const { contactCta } = home[locale];
+
   return (
     <section id="contact" className="w-full scroll-mt-8 bg-primary px-6 py-20 sm:py-28">
       <RevealGroup className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
@@ -31,7 +34,7 @@ export function ContactCtaSection() {
               </>
             );
             return link.icon === "mail" ? (
-              <EmailLink key={link.href} className={className}>
+              <EmailLink key={link.href} locale={locale} className={className}>
                 {content}
               </EmailLink>
             ) : (

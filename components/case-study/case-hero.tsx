@@ -1,19 +1,17 @@
 import Link from "next/link";
 import type { CaseStudy } from "@/content/cases/types";
 import { asset } from "@/lib/asset";
+import { ui } from "@/content/ui";
+import type { Locale } from "@/lib/i18n";
 
-export function CaseHero({ study }: { study: CaseStudy }) {
+export function CaseHero({ study, locale }: { study: CaseStudy; locale: Locale }) {
+  const t = ui[locale];
+
   return (
     <section
-      className="relative -mt-[62px] overflow-hidden px-6 pt-32 pb-16 sm:pt-40 sm:pb-24"
-      style={{ backgroundImage: study.heroBackground }}
+      className="relative -mt-[62px] overflow-hidden px-6 pt-24 pb-16 sm:pt-28 sm:pb-24"
+      style={{ backgroundColor: study.heroBackground }}
     >
-      {study.heroGlow && (
-        <div
-          className="pointer-events-none absolute -top-32 right-0 size-[500px] rounded-full opacity-60"
-          style={{ background: study.heroGlow }}
-        />
-      )}
       <div className="relative mx-auto flex max-w-4xl flex-col gap-16 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-col items-start gap-10">
           <Link
@@ -31,11 +29,11 @@ export function CaseHero({ study }: { study: CaseStudy }) {
           </div>
         </div>
         <div className="flex w-full flex-col gap-4 rounded-2xl border border-white/25 bg-white/10 p-6 sm:w-[280px]">
-          <MetaRow label="Роль" value={study.meta.role} />
+          <MetaRow label={t.metaRole} value={study.meta.role} />
           <div className="h-px w-full bg-white/15" />
-          <MetaRow label="Срок" value={study.meta.duration} />
+          <MetaRow label={t.metaDuration} value={study.meta.duration} />
           <div className="h-px w-full bg-white/15" />
-          <MetaRow label="Тип" value={study.meta.type} />
+          <MetaRow label={t.metaType} value={study.meta.type} />
           <div className="flex flex-wrap gap-1.5 pt-2">
             {study.meta.tools.map((tool) => (
               <span

@@ -4,7 +4,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "motion/react";
 import { Check } from "lucide-react";
-import { email } from "@/content/home";
+import { home } from "@/content/home";
+import type { Locale } from "@/lib/i18n";
 
 const TOAST_DURATION_MS = 2200;
 
@@ -30,7 +31,16 @@ async function copyText(text: string) {
  * Ссылка на почту: открывает черновик письма с готовой темой и заодно копирует адрес
  * в буфер — на случай, если у посетителя не настроена почтовая программа.
  */
-export function EmailLink({ className, children }: { className?: string; children: ReactNode }) {
+export function EmailLink({
+  locale,
+  className,
+  children,
+}: {
+  locale: Locale;
+  className?: string;
+  children: ReactNode;
+}) {
+  const { email } = home[locale];
   const [copied, setCopied] = useState(false);
   // Портал монтируем только после первого копирования: так серверная и клиентская разметка совпадают.
   const [toastMounted, setToastMounted] = useState(false);

@@ -7,6 +7,9 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || undefined;
 const nextConfig: NextConfig = {
   output: "export",
   basePath,
+  // Каждая страница — папка с index.html (en/index.html, en/cases/vecta/index.html):
+  // так GitHub Pages не путает en.html с папкой en/.
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

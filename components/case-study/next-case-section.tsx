@@ -1,18 +1,24 @@
 import Link from "next/link";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { asset } from "@/lib/asset";
+import { ui } from "@/content/ui";
+import { localizePath, type Locale } from "@/lib/i18n";
 
 export function NextCaseSection({
   next,
+  locale,
 }: {
   next: { title: string; subtitle: string; href: string };
+  locale: Locale;
 }) {
+  const t = ui[locale];
+
   return (
     <section className="w-full border-t border-[#EBEBEB] px-6 py-16 sm:py-20">
       <RevealGroup className="mx-auto flex max-w-4xl flex-col items-center gap-10">
         <RevealItem className="w-full">
           <p className="text-xs font-semibold tracking-widest text-[#AAA] uppercase">
-            Следующий кейс
+            {t.nextCase}
           </p>
         </RevealItem>
         <RevealItem className="w-full">
@@ -33,11 +39,11 @@ export function NextCaseSection({
         </RevealItem>
         <RevealItem>
           <Link
-            href="/#cases"
+            href={localizePath(locale, "/#cases")}
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#666] hover:text-primary"
           >
             <img src={asset("/cases/vecta/icon-arrow-left.svg")} alt="" width={16} height={16} />
-            Вернуться к портфолио
+            {t.backToPortfolio}
           </Link>
         </RevealItem>
       </RevealGroup>

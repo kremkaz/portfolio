@@ -1,10 +1,15 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
-import { hero } from "@/content/home";
+import { home } from "@/content/home";
+import { ui } from "@/content/ui";
+import type { Locale } from "@/lib/i18n";
 import { asset } from "@/lib/asset";
 
-export function HeroSection() {
+export function HeroSection({ locale }: { locale: Locale }) {
+  const { hero } = home[locale];
+  const t = ui[locale];
+
   return (
     <RevealGroup
       as="section"
@@ -52,7 +57,7 @@ export function HeroSection() {
             size="lg"
             className="h-13 justify-center gap-2 rounded-xl bg-primary px-7 text-base font-semibold text-white hover:bg-primary/90"
           >
-            Смотреть кейсы
+            {t.viewCases}
             <img
               src={asset("/home/icon-arrow-up-outline.svg")}
               alt=""

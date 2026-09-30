@@ -6,8 +6,7 @@ export const tanuki: CaseStudy = {
   backHref: "/#cases",
   title: "Tanuki доставка — изменить блюдо",
   subtitle: "Фича для изменения состава блюда",
-  heroBackground:
-    "linear-gradient(rgb(193 0 81 / 0.36), rgb(193 0 81 / 0.36)), linear-gradient(151deg, #ff006b 0%, #ff2d85 100%)",
+  heroBackground: "#e81d72",
   meta: {
     role: "Product designer (проект)",
     duration: "4 недели",

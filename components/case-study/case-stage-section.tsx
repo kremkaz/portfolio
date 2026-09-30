@@ -1,10 +1,9 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { StageLabel } from "@/components/case-study/stage-label";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { renderRichText } from "@/lib/rich-text";
+import { ZoomableImage } from "@/components/case-study/image-lightbox";
 import type { CaseImage, CaseStageBlock, CaseStat } from "@/content/cases/types";
-import { asset } from "@/lib/asset";
 
 export function CaseStageSection({
   number,
@@ -54,12 +53,10 @@ export function CaseFigure({
     <div
       className={`overflow-hidden rounded-2xl bg-white ${bordered ? "border border-[#ECECEC]" : ""} ${className}`}
     >
-      <Image
-        src={asset(image.src)}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
-        className={fill ? "size-full object-cover" : "h-auto w-full object-cover"}
+      <ZoomableImage
+        image={image}
+        className={fill ? "size-full" : undefined}
+        imageClassName={fill ? "size-full object-cover" : "h-auto w-full object-cover"}
       />
     </div>
   );

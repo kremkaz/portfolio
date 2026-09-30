@@ -5,8 +5,15 @@ import { ChevronDown } from "lucide-react";
 
 import type { CaseCalloutContent } from "@/content/cases/types";
 import { cn } from "@/lib/utils";
+import { ui } from "@/content/ui";
+import type { Locale } from "@/lib/i18n";
 
-export function CaseCallout({ title, details }: CaseCalloutContent) {
+export function CaseCallout({
+  title,
+  details,
+  locale,
+}: CaseCalloutContent & { locale: Locale }) {
+  const t = ui[locale];
   const [open, setOpen] = useState(false);
   const detailsId = useId();
   const expandable = Boolean(details?.length);
@@ -28,7 +35,7 @@ export function CaseCallout({ title, details }: CaseCalloutContent) {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls={detailsId}
-            aria-label={open ? "Свернуть" : "Развернуть"}
+            aria-label={open ? t.collapse : t.expand}
             className="-m-1 shrink-0 rounded-full p-1 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-primary"
           >
             <ChevronDown

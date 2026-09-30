@@ -44,13 +44,11 @@
 
 ## Шапка кейса (hero на странице кейса)
 
-У каждого кейса свой градиент шапки, значение лежит в контенте кейса (`heroBackground` в `content/cases/*.ts`):
+У каждого кейса свой сплошной цвет шапки, без градиентов. Значение лежит в контенте кейса (`heroBackground` в `content/cases/*.ts`):
 
 ```css
-/* Vecta */
---case-hero-vecta: linear-gradient(151deg, #000FDC 0%, #001580 100%);
-/* Tanuki — сверено с Figma (node 37:3009): градиент #FF006B → #FF2D85 + затемняющий слой rgb(193 0 81 / 0.36) */
---case-hero-tanuki: linear-gradient(rgb(193 0 81 / 0.36), rgb(193 0 81 / 0.36)), linear-gradient(151deg, #FF006B 0%, #FF2D85 100%);
+--case-hero-vecta: #000FDC;  /* = --primary */
+--case-hero-tanuki: #E81D72; /* розовый #FF2D85 с затемнением rgb(193 0 81 / 0.36) из Figma, сведённый в один цвет */
 ```
 
 Пилюли со статистикой в кейсе Tanuki — заливка `#FF2D85` (тот же розовый, что у soft-скиллов), подпись под ними — `#909090`.

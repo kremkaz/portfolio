@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { VectaCasePage } from "@/components/pages/vecta-case-page";
+import { TanukiCasePage } from "@/components/pages/tanuki-case-page";
 import { caseStudies } from "@/content/cases";
 
-const study = caseStudies.vecta.ru;
+const study = caseStudies.tanuki.en;
 
 export const metadata: Metadata = {
   title: study.title,
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <VectaCasePage locale="ru" />;
+  return <TanukiCasePage locale="en" />;
 }
