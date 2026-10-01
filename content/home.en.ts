@@ -21,7 +21,7 @@ export const homeEn: HomeContent = {
       "A design degree and a wide range of interests. I love user experience, people and technology <3",
       "I get excited about new projects, regularly take courses to go deeper into specific topics, and keep up with the industry — Yandex Product Fest, UX CX Conf and more.",
     ],
-    cvHref: "#",
+    cvHref: "/cv/Evgenia-Artyushina-CV.pdf",
     photo: "/home/hero-photo.jpg",
   },
   cases: {

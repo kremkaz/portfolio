@@ -43,7 +43,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
         </RevealItem>
         <RevealItem className="flex w-full flex-col items-stretch gap-3 pt-2 sm:w-auto sm:flex-row sm:gap-4">
           <Button
-            render={<a href={hero.cvHref} />}
+            render={<a href={asset(hero.cvHref)} download />}
             nativeButton={false}
             size="lg"
             variant="outline"
