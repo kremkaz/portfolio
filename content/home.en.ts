@@ -14,11 +14,10 @@ export const homeEn: HomeContent = {
     socials: [{ label: "Telegram", href: "https://t.me/kremka_zzz", icon: "telegram" as const }],
   },
   hero: {
-    availability: "Open to offers",
     name: "Evgenia Artyushina",
     role: "Product Designer | UX/UI",
     bio: [
-      "A design degree and a wide range of interests. I love user experience, people and technology <3",
+      "A design degree and a wide range of interests. I love UX, people and technology <3",
       "I get excited about new projects, regularly take courses to go deeper into specific topics, and keep up with the industry — Yandex Product Fest, UX CX Conf and more.",
     ],
     cvHref: "/cv/Evgenia-Artyushina-CV.pdf",
@@ -93,7 +92,7 @@ export const homeEn: HomeContent = {
     copiedMessage: "Email copied",
   },
   contactCta: {
-    heading: "Let's make something great together :)",
+    heading: "Let’s create something nice together :)",
     subheading: "Drop me a line — I'll get back to you within a day",
     links: [
       { label: "t.me/kremka_zzz", href: "https://t.me/kremka_zzz", icon: "telegram" as const },

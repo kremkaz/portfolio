@@ -13,7 +13,6 @@ export const nav = {
 };
 
 export const hero = {
-  availability: "Открыта к офферам",
   name: "Евгения Артюшина",
   role: "Product дизайнер | UX/UI",
   bio: [

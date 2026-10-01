@@ -18,15 +18,6 @@ export function HeroSection({ locale }: { locale: Locale }) {
     >
       <div className="flex w-full flex-col items-start gap-6 lg:max-w-[560px]">
         <RevealItem className="flex flex-col items-start gap-4">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[rgba(0,255,13,0.12)] px-4 py-1.5">
-            <span className="relative flex size-1.5 shrink-0">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#00CC03] opacity-75" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-[#00CC03]" />
-            </span>
-            <span className="text-xs font-medium tracking-wide text-[rgba(0,96,0,0.9)] uppercase">
-              {hero.availability}
-            </span>
-          </span>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-semibold tracking-tight text-[#111212] sm:text-5xl">
               {hero.name}
