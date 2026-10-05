@@ -19,7 +19,7 @@ export const homeEn: HomeContent = {
       "A design degree and a wide range of interests. I love UX, people and technology <3",
       "I get excited about new projects, regularly take courses to go deeper into specific topics, and keep up with the industry.",
     ],
-    photo: "/home/hero-photo.jpg",
+    photo: "/home/hero-photo-autumn.jpg",
   },
   cases: {
     heading: "Case studies",

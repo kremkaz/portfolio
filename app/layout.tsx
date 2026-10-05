@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "kremka_portfolio",
+  title: "Евгения Артюшина — продуктовый дизайнер",
   description: "Портфолио Евгении Артюшиной — product-дизайн, UX/UI",
 };
 

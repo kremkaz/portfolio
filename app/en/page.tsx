@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HomePage } from "@/components/pages/home-page";
 
 export const metadata: Metadata = {
+  title: "Evgenia Artyushina — Product Designer",
   description: "Evgenia Artyushina's portfolio — product design, UX/UI",
 };
 

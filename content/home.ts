@@ -18,7 +18,7 @@ export const hero = {
     "Профильное образование и широкий кругозор. Люблю пользовательский опыт, людей и технологии <3",
     "С интересом берусь за новые проекты, регулярно прохожу курсы для углубления в отдельные темы и слежу за индустрией.",
   ],
-  photo: "/home/hero-photo.jpg",
+  photo: "/home/hero-photo-autumn.jpg",
 };
 
 export type CaseStatus = "published" | "in-progress";
