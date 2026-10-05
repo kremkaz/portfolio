@@ -88,6 +88,20 @@ export const skills = {
       "открыта к фидбеку",
     ],
   },
+  tools: {
+    label: "tools",
+    items: [
+      "Figma",
+      "FigJam",
+      "Photoshop",
+      "Illustrator",
+      "CorelDraw",
+      "Miro",
+      "Pathway",
+      "Claude Code",
+      "Antigravity",
+    ],
+  },
 };
 
 /** Почта: ссылка открывает черновик письма с темой и одновременно копирует адрес. */

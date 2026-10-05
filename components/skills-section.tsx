@@ -16,7 +16,7 @@ function ChipGroup({
   firstTiltsLeft?: boolean;
 }) {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2.5">
+    <div className="flex flex-wrap items-center gap-2.5">
       {items.map((item, index) => {
         const tiltRight = index % 2 === 0 && !(firstTiltsLeft && index === 0);
         return (
@@ -24,7 +24,7 @@ function ChipGroup({
             key={item}
             whileHover={tiltRight ? { x: 3, y: -5, rotate: -3 } : { x: -3, y: -5, rotate: 3 }}
             transition={{ type: "spring", stiffness: 350, damping: 12 }}
-            className={`inline-flex h-10 items-center rounded-full px-4 text-sm font-medium whitespace-nowrap text-white ${className}`}
+            className={`inline-flex h-10 items-center rounded-full px-4 text-sm font-semibold whitespace-nowrap ${className}`}
           >
             {item}
           </motion.span>
@@ -36,6 +36,12 @@ function ChipGroup({
 
 export function SkillsSection({ locale }: { locale: Locale }) {
   const { skills } = home[locale];
+  // Чипсы полупрозрачные, как теги в карточках кейсов.
+  const groups = [
+    { key: "hard", ...skills.hard, className: "bg-primary/[0.07] text-primary", firstTiltsLeft: true },
+    { key: "soft", ...skills.soft, className: "bg-[#FF2D85]/[0.07] text-[#FF2D85]", firstTiltsLeft: false },
+    { key: "tools", ...skills.tools, className: "bg-black/[0.07] text-[#111212]", firstTiltsLeft: false },
+  ];
 
   return (
     <section id="skills" className="flex w-full scroll-mt-28 flex-col items-center gap-10">
@@ -45,20 +51,19 @@ export function SkillsSection({ locale }: { locale: Locale }) {
             {skills.heading}
           </h2>
         </RevealItem>
-        <div className="flex w-full flex-col items-center gap-10 md:flex-row md:items-stretch md:justify-center md:gap-12">
-          <RevealItem className="flex w-full flex-col items-center gap-4 md:w-[400px]">
-            <p className="text-xs font-medium tracking-widest text-[#AAA] uppercase">
-              {skills.hard.label}
-            </p>
-            <ChipGroup items={skills.hard.items} className="bg-primary" firstTiltsLeft />
-          </RevealItem>
-          <div className="hidden w-px self-stretch bg-[#EBEBEB] md:block" />
-          <RevealItem className="flex w-full flex-col items-center gap-4 md:w-[440px]">
-            <p className="text-xs font-medium tracking-widest text-[#AAA] uppercase">
-              {skills.soft.label}
-            </p>
-            <ChipGroup items={skills.soft.items} className="bg-[#FF2D85]" />
-          </RevealItem>
+        <div className="grid w-full gap-10 lg:grid-cols-3">
+          {groups.map((group) => (
+            <RevealItem key={group.key} className="flex flex-col items-start gap-4">
+              <p className="text-xs font-medium tracking-widest text-[#AAA] uppercase">
+                {group.label}
+              </p>
+              <ChipGroup
+                items={group.items}
+                className={group.className}
+                firstTiltsLeft={group.firstTiltsLeft}
+              />
+            </RevealItem>
+          ))}
         </div>
       </RevealGroup>
     </section>

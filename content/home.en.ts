@@ -85,6 +85,20 @@ export const homeEn: HomeContent = {
         "open to feedback",
       ],
     },
+    tools: {
+      label: "tools",
+      items: [
+        "Figma",
+        "FigJam",
+        "Photoshop",
+        "Illustrator",
+        "CorelDraw",
+        "Miro",
+        "Pathway",
+        "Claude Code",
+        "Antigravity",
+      ],
+    },
   },
   email: {
     address: emailAddress,
