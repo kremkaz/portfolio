@@ -15,6 +15,7 @@ import {
 } from "@/lib/i18n";
 import { useActiveSection } from "@/lib/use-active-section";
 import { asset } from "@/lib/asset";
+import { EmailLink } from "@/components/email-link";
 
 /**
  * Где стоит кнопка языка: "separate" — отдельным кружком справа от шапки,
@@ -70,7 +71,7 @@ export function SiteHeader() {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="sticky top-4 z-50 mx-auto flex w-[calc(100%-2rem)] max-w-[1142px] items-center gap-2 sm:top-6 sm:gap-3"
     >
-      <header className="flex min-w-0 flex-1 items-center justify-between gap-3 rounded-full border border-black/[0.04] bg-white/80 py-2 pr-2 pl-4 shadow-[0_8px_30px_-12px_rgba(0,15,220,0.15)] backdrop-blur-md sm:pl-6">
+      <header className="flex min-w-0 flex-1 items-center justify-between gap-3 rounded-full border border-black/[0.04] bg-white/80 py-2 pr-2 pl-4 shadow-[0_8px_30px_-12px_rgba(0,81,112,0.15)] backdrop-blur-md sm:pl-6">
         <nav className="flex min-w-0 items-center gap-0.5 overflow-x-auto sm:gap-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {nav.links.map((link) => {
             const id = link.href.replace("#", "");
@@ -147,6 +148,19 @@ export function SiteHeader() {
               />
             </a>
           ))}
+          <EmailLink
+            locale={locale}
+            ariaLabel={t.emailButton}
+            className="flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] transition-colors hover:bg-primary/[0.08] sm:size-11"
+          >
+            <img
+              src={asset("/home/icon-nav-social-2.svg")}
+              alt=""
+              width={32}
+              height={32}
+              className="size-4.5 sm:size-5"
+            />
+          </EmailLink>
         </div>
       </header>
       {/* Отдельный «стеклянный» кружок той же высоты, что и шапка. */}
@@ -155,7 +169,7 @@ export function SiteHeader() {
         onClick={switchLanguage}
         aria-label={t.languageSwitch.ariaLabel}
         lang={otherLocale}
-        className={`${showSeparate} size-[58px] shrink-0 items-center justify-center rounded-full border border-black/[0.04] bg-white/80 text-sm font-semibold tracking-wide text-primary shadow-[0_8px_30px_-12px_rgba(0,15,220,0.15)] backdrop-blur-md transition-colors hover:bg-primary hover:text-white sm:size-[62px]`}
+        className={`${showSeparate} size-[58px] shrink-0 items-center justify-center rounded-full border border-black/[0.04] bg-white/80 text-sm font-semibold tracking-wide text-primary shadow-[0_8px_30px_-12px_rgba(0,81,112,0.15)] backdrop-blur-md transition-colors hover:bg-primary hover:text-white sm:size-[62px]`}
       >
         {t.languageSwitch.label}
       </button>

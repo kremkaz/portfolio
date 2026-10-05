@@ -6,7 +6,7 @@ export const vecta: CaseStudy = {
   backHref: "/#cases",
   title: "Vecta — беспилотное такси",
   subtitle: "Концепт B2B сервиса для инженеров беспилотного такси",
-  heroBackground: "#000fdc",
+  heroBackground: "#005170",
   meta: {
     role: "UI/UX дизайнер",
     duration: "2 недели",

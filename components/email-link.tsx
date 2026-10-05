@@ -34,10 +34,13 @@ async function copyText(text: string) {
 export function EmailLink({
   locale,
   className,
+  ariaLabel,
   children,
 }: {
   locale: Locale;
   className?: string;
+  /** Для кнопки-иконки без текста. */
+  ariaLabel?: string;
   children: ReactNode;
 }) {
   const { email } = home[locale];
@@ -65,6 +68,7 @@ export function EmailLink({
       <a
         href={`mailto:${email.address}?subject=${encodeURIComponent(email.subject)}`}
         onClick={handleClick}
+        aria-label={ariaLabel}
         className={className}
       >
         {children}

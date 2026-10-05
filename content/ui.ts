@@ -17,6 +17,7 @@ const ru = {
   metaRole: "Роль",
   metaDuration: "Срок",
   metaType: "Тип",
+  emailButton: "Написать на почту",
   /** Кнопка переключения языка: подпись — язык, на который переключаемся. */
   languageSwitch: { label: "EN", ariaLabel: "Switch to English" },
 };
@@ -37,6 +38,7 @@ const en: typeof ru = {
   metaRole: "Role",
   metaDuration: "Timeline",
   metaType: "Type",
+  emailButton: "Send an email",
   languageSwitch: { label: "RU", ariaLabel: "Переключить на русский" },
 };
 

@@ -115,7 +115,7 @@ export function CaseCard({
   );
 
   const className =
-    "flex w-full flex-col overflow-hidden rounded-2xl border border-[#E8E8EC] bg-white hover:shadow-[0_12px_32px_-16px_rgba(0,15,220,0.25)]";
+    "flex w-full flex-col overflow-hidden rounded-2xl border border-[#E8E8EC] bg-white hover:shadow-[0_12px_32px_-16px_rgba(0,81,112,0.25)]";
 
   const reveal = {
     custom: index,
