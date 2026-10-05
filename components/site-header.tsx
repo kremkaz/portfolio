@@ -22,7 +22,7 @@ import { EmailLink } from "@/components/email-link";
  * "inside" — внутри шапки рядом с Telegram, "responsive" — внутри на телефоне,
  * отдельно на компьютере. Все варианты рабочие, переключается здесь.
  */
-const LANGUAGE_SWITCH_PLACEMENT = "responsive" as
+const LANGUAGE_SWITCH_PLACEMENT = "inside" as
   "separate" | "inside" | "responsive";
 
 // Классы видимости для каждого варианта: на телефоне (до sm) и с sm и шире.
@@ -128,7 +128,7 @@ export function SiteHeader() {
             onClick={switchLanguage}
             aria-label={t.languageSwitch.ariaLabel}
             lang={otherLocale}
-            className={`${showInside} size-10 items-center justify-center rounded-full bg-[#F7F7F9] text-xs font-semibold tracking-wide text-primary transition-colors hover:bg-primary hover:text-white sm:size-11 sm:text-sm`}
+            className={`${showInside} size-10 items-center justify-center rounded-full bg-[#F7F7F9] text-xs font-semibold tracking-wide text-primary transition-colors hover:bg-background-section-hover hover:text-primary-hover sm:size-11 sm:text-sm`}
           >
             {t.languageSwitch.label}
           </button>
@@ -137,28 +137,28 @@ export function SiteHeader() {
               key={social.href}
               href={social.href}
               aria-label={social.label}
-              className="flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] transition-colors hover:bg-primary/[0.08] sm:size-11"
+              className="group flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] transition-colors hover:bg-background-section-hover sm:size-11"
             >
               <img
                 src={asset(socialIcons[social.icon])}
                 alt=""
                 width={32}
                 height={32}
-                className="size-4.5 sm:size-5"
+                className="size-4.5 transition-[filter] group-hover:brightness-80 sm:size-5"
               />
             </a>
           ))}
           <EmailLink
             locale={locale}
             ariaLabel={t.emailButton}
-            className="flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] transition-colors hover:bg-primary/[0.08] sm:size-11"
+            className="group flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] transition-colors hover:bg-background-section-hover sm:size-11"
           >
             <img
               src={asset("/home/icon-nav-social-2.svg")}
               alt=""
               width={32}
               height={32}
-              className="size-4.5 sm:size-5"
+              className="size-4.5 transition-[filter] group-hover:brightness-80 sm:size-5"
             />
           </EmailLink>
         </div>
@@ -169,7 +169,7 @@ export function SiteHeader() {
         onClick={switchLanguage}
         aria-label={t.languageSwitch.ariaLabel}
         lang={otherLocale}
-        className={`${showSeparate} size-[58px] shrink-0 items-center justify-center rounded-full border border-black/[0.04] bg-white/80 text-sm font-semibold tracking-wide text-primary shadow-[0_8px_30px_-12px_rgba(0,81,112,0.15)] backdrop-blur-md transition-colors hover:bg-primary hover:text-white sm:size-[62px]`}
+        className={`${showSeparate} size-[58px] shrink-0 items-center justify-center rounded-full border border-black/[0.04] bg-white/80 text-sm font-semibold tracking-wide text-primary shadow-[0_8px_30px_-12px_rgba(0,81,112,0.15)] backdrop-blur-md transition-colors hover:bg-background-section-hover hover:text-primary-hover sm:size-[62px]`}
       >
         {t.languageSwitch.label}
       </button>

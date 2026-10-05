@@ -24,7 +24,7 @@ export function NextCaseSection({
         <RevealItem className="w-full">
           <Link
             href={next.href}
-            className="flex w-full items-center justify-between gap-6 rounded-2xl bg-[#F7F7F9] px-8 py-9 transition-colors hover:bg-primary/[0.06]"
+            className="group flex w-full items-center justify-between gap-6 rounded-2xl bg-[#F7F7F9] px-8 py-9 transition-colors hover:bg-background-section-hover"
           >
             <div className="flex flex-col gap-1">
               <p className="text-2xl font-extrabold tracking-tight text-[#0A0A0A] sm:text-3xl">
@@ -32,7 +32,7 @@ export function NextCaseSection({
               </p>
               <p className="text-[15px] text-[#888]">{next.subtitle}</p>
             </div>
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary sm:size-13">
+            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary transition-colors group-hover:bg-primary-hover sm:size-13">
               <img src={asset("/cases/vecta/icon-arrow-right-circle.svg")} alt="" width={22} height={22} />
             </span>
           </Link>

@@ -7,7 +7,6 @@ export const nav = {
     { label: "О себе", href: "#about" },
     { label: "Кейсы", href: "#cases" },
     { label: "Навыки", href: "#skills" },
-    { label: "Контакты", href: "#contact" },
   ],
   socials: [{ label: "Telegram", href: "https://t.me/kremka_zzz", icon: "telegram" as const }],
 };

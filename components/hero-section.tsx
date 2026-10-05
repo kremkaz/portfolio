@@ -37,7 +37,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
             render={<a href="#cases" />}
             nativeButton={false}
             size="lg"
-            className="h-13 justify-center gap-2 rounded-xl bg-primary px-7 text-base font-semibold text-white hover:bg-primary/90"
+            className="h-13 justify-center gap-2 rounded-xl bg-primary px-7 text-base font-semibold text-white hover:bg-primary-hover"
           >
             {t.viewCases}
             <img

@@ -35,6 +35,8 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-background-section-hover: var(--background-section-hover);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -56,6 +58,10 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: #005170;
+  /* Ховер у всего, что окрашено в primary: тот же цвет, чуть темнее. */
+  --primary-hover: color-mix(in oklch, var(--primary) 80%, black);
+  /* Ховер у серых кружков и плашек с фоном #F7F7F9. */
+  --background-section-hover: #EEEEF1;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);

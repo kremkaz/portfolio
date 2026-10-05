@@ -36,7 +36,7 @@ export function CaseCallout({
             aria-expanded={open}
             aria-controls={detailsId}
             aria-label={open ? t.collapse : t.expand}
-            className="-m-1 shrink-0 rounded-full p-1 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-primary"
+            className="-m-1 shrink-0 rounded-full p-1 transition-colors hover:text-primary-hover focus-visible:outline-2 focus-visible:outline-primary"
           >
             <ChevronDown
               className={cn("size-6 transition-transform duration-300", open && "rotate-180")}

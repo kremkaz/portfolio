@@ -102,9 +102,15 @@ export function CaseCard({
         >
           <span className="text-xs text-[#AAA]">{year ?? t.soon}</span>
           {!inProgress ? (
-            <span className="flex items-center gap-1 text-sm font-semibold text-primary">
+            <span className="flex items-center gap-1 text-sm font-semibold text-primary transition-colors group-hover:text-primary-hover">
               {t.openCase}
-              <img src={asset("/home/icon-arrow-up-right.svg")} alt="" width={18} height={18} />
+              <img
+                src={asset("/home/icon-arrow-up-right.svg")}
+                alt=""
+                width={18}
+                height={18}
+                className="transition-[filter] group-hover:brightness-80"
+              />
             </span>
           ) : (
             <span className="text-sm font-semibold text-[#A7A7A7]">{t.inProgress}</span>
@@ -130,7 +136,7 @@ export function CaseCard({
       <MotionLink
         href={href}
         {...reveal}
-        className={`${className} transition-[box-shadow,scale] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03]`}
+        className={`group ${className} transition-[box-shadow,scale] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03]`}
       >
         {content}
       </MotionLink>
