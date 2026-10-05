@@ -71,7 +71,7 @@ export function SiteHeader() {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="sticky top-4 z-50 mx-auto flex w-[calc(100%-2rem)] max-w-[1142px] items-center gap-2 sm:top-6 sm:gap-3"
     >
-      <header className="flex min-w-0 flex-1 items-center justify-between gap-3 rounded-full border border-black/[0.04] bg-white/80 py-2 pr-2 pl-4 shadow-[0_8px_30px_-12px_rgba(0,81,112,0.15)] backdrop-blur-md sm:pl-6">
+      <header className="flex min-w-0 flex-1 items-center justify-between gap-3 rounded-full border border-black/[0.04] bg-white/80 p-2 shadow-[0_8px_30px_-12px_rgba(0,81,112,0.15)] backdrop-blur-md">
         <nav className="flex min-w-0 items-center gap-0.5 overflow-x-auto sm:gap-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {nav.links.map((link) => {
             const id = link.href.replace("#", "");
@@ -100,7 +100,7 @@ export function SiteHeader() {
                   }
                 }}
                 // «О себе» на телефоне не показываем: наверх и так легко вернуться прокруткой.
-                className={`relative shrink-0 px-2 py-2 text-sm font-medium sm:px-3 text-[#5C5C67] transition-colors hover:text-[#111212] ${
+                className={`relative flex h-10 shrink-0 items-center px-3 text-sm font-medium sm:h-11 sm:px-4 text-[#5C5C67] transition-colors hover:text-[#111212] ${
                   isTop ? "max-sm:hidden" : ""
                 }`}
               >
