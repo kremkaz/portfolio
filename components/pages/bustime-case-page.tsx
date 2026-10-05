@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { bustime as bustimeContent } from "@/content/cases/bustime";
 import type { Locale } from "@/lib/i18n";
-import { asset } from "@/lib/asset";
+import { Icon } from "@/components/icon";
 
 export function BusTimeCasePage({ locale }: { locale: Locale }) {
   const bustime = bustimeContent[locale];
@@ -30,7 +30,7 @@ export function BusTimeCasePage({ locale }: { locale: Locale }) {
               href={bustime.backHref}
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#666] hover:text-primary"
             >
-              <img src={asset("/cases/vecta/icon-arrow-left.svg")} alt="" width={16} height={16} />
+              <Icon src="/cases/vecta/icon-arrow-left.svg" className="size-4" />
               {bustime.backLabel}
             </Link>
           </RevealItem>

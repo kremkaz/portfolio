@@ -7,6 +7,7 @@ import type { CaseStatus } from "@/content/home";
 import { ui } from "@/content/ui";
 import type { Locale } from "@/lib/i18n";
 import { asset } from "@/lib/asset";
+import { Icon } from "@/components/icon";
 
 export type CaseCardProps = {
   index: number;
@@ -104,13 +105,7 @@ export function CaseCard({
           {!inProgress ? (
             <span className="flex items-center gap-1 text-sm font-semibold text-primary transition-colors group-hover:text-primary-hover">
               {t.openCase}
-              <img
-                src={asset("/home/icon-arrow-up-right.svg")}
-                alt=""
-                width={18}
-                height={18}
-                className="transition-[filter] group-hover:brightness-80"
-              />
+              <Icon src="/home/icon-arrow-up-right.svg" className="size-[18px]" />
             </span>
           ) : (
             <span className="text-sm font-semibold text-[#A7A7A7]">{t.inProgress}</span>

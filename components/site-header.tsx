@@ -14,8 +14,8 @@ import {
   stripLocale,
 } from "@/lib/i18n";
 import { useActiveSection } from "@/lib/use-active-section";
-import { asset } from "@/lib/asset";
 import { EmailLink } from "@/components/email-link";
+import { Icon } from "@/components/icon";
 
 /**
  * Где стоит кнопка языка: "separate" — отдельным кружком справа от шапки,
@@ -137,29 +137,17 @@ export function SiteHeader() {
               key={social.href}
               href={social.href}
               aria-label={social.label}
-              className="group flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] transition-colors hover:bg-background-section-hover sm:size-11"
+              className="flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] text-primary transition-colors hover:bg-background-section-hover hover:text-primary-hover sm:size-11"
             >
-              <img
-                src={asset(socialIcons[social.icon])}
-                alt=""
-                width={32}
-                height={32}
-                className="size-4.5 transition-[filter] group-hover:brightness-80 sm:size-5"
-              />
+              <Icon src={socialIcons[social.icon]} className="size-4.5 sm:size-5" />
             </a>
           ))}
           <EmailLink
             locale={locale}
             ariaLabel={t.emailButton}
-            className="group flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] transition-colors hover:bg-background-section-hover sm:size-11"
+            className="flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] text-primary transition-colors hover:bg-background-section-hover hover:text-primary-hover sm:size-11"
           >
-            <img
-              src={asset("/home/icon-nav-social-2.svg")}
-              alt=""
-              width={32}
-              height={32}
-              className="size-4.5 transition-[filter] group-hover:brightness-80 sm:size-5"
-            />
+            <Icon src="/home/icon-nav-social-2.svg" className="size-4.5 sm:size-5" />
           </EmailLink>
         </div>
       </header>

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { CaseStudy } from "@/content/cases/types";
-import { asset } from "@/lib/asset";
 import { ui } from "@/content/ui";
 import type { Locale } from "@/lib/i18n";
+import { Icon } from "@/components/icon";
 
 export function CaseHero({ study, locale }: { study: CaseStudy; locale: Locale }) {
   const t = ui[locale];
@@ -18,7 +18,7 @@ export function CaseHero({ study, locale }: { study: CaseStudy; locale: Locale }
             href={study.backHref}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/15"
           >
-            <img src={asset("/cases/vecta/icon-back.svg")} alt="" width={14} height={14} />
+            <Icon src="/cases/vecta/icon-back.svg" className="size-3.5" />
             {study.backLabel}
           </Link>
           <div className="flex flex-col gap-4">

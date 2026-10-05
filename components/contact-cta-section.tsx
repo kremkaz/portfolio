@@ -2,7 +2,7 @@ import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { EmailLink } from "@/components/email-link";
 import { home } from "@/content/home";
 import type { Locale } from "@/lib/i18n";
-import { asset } from "@/lib/asset";
+import { Icon } from "@/components/icon";
 
 const icons = {
   telegram: "/home/icon-telegram.svg",
@@ -26,16 +26,10 @@ export function ContactCtaSection({ locale }: { locale: Locale }) {
         <RevealItem className="flex w-full flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
           {contactCta.links.map((link) => {
             const className =
-              "group flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 sm:w-72 text-sm font-semibold text-primary transition-[translate,color] hover:-translate-y-0.5 hover:text-primary-hover sm:text-base";
+              "flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 sm:w-72 text-sm font-semibold text-primary transition-[translate,color] hover:-translate-y-0.5 hover:text-primary-hover sm:text-base";
             const content = (
               <>
-                <img
-                  src={asset(icons[link.icon])}
-                  alt=""
-                  width={20}
-                  height={20}
-                  className="transition-[filter] group-hover:brightness-80"
-                />
+                <Icon src={icons[link.icon]} className="size-5" />
                 {link.label}
               </>
             );

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
-import { asset } from "@/lib/asset";
 import { ui } from "@/content/ui";
 import { localizePath, type Locale } from "@/lib/i18n";
+import { Icon } from "@/components/icon";
 
 export function NextCaseSection({
   next,
@@ -33,7 +33,7 @@ export function NextCaseSection({
               <p className="text-[15px] text-[#888]">{next.subtitle}</p>
             </div>
             <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary transition-colors group-hover:bg-primary-hover sm:size-13">
-              <img src={asset("/cases/vecta/icon-arrow-right-circle.svg")} alt="" width={22} height={22} />
+              <Icon src="/cases/vecta/icon-arrow-right-circle.svg" className="size-[22px] text-white" />
             </span>
           </Link>
         </RevealItem>
@@ -42,7 +42,7 @@ export function NextCaseSection({
             href={localizePath(locale, "/#cases")}
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#666] hover:text-primary"
           >
-            <img src={asset("/cases/vecta/icon-arrow-left.svg")} alt="" width={16} height={16} />
+            <Icon src="/cases/vecta/icon-arrow-left.svg" className="size-4" />
             {t.backToPortfolio}
           </Link>
         </RevealItem>

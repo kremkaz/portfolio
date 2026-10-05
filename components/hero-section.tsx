@@ -5,6 +5,7 @@ import { home } from "@/content/home";
 import { ui } from "@/content/ui";
 import type { Locale } from "@/lib/i18n";
 import { asset } from "@/lib/asset";
+import { Icon } from "@/components/icon";
 
 export function HeroSection({ locale }: { locale: Locale }) {
   const { hero } = home[locale];
@@ -40,13 +41,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
             className="h-13 justify-center gap-2 rounded-xl bg-primary px-7 text-base font-semibold text-white hover:bg-primary-hover"
           >
             {t.viewCases}
-            <img
-              src={asset("/home/icon-arrow-up-outline.svg")}
-              alt=""
-              width={32}
-              height={32}
-              className="size-5 rotate-90"
-            />
+            <Icon src="/home/icon-arrow-up-outline.svg" className="size-5 rotate-90" />
           </Button>
         </RevealItem>
       </div>
