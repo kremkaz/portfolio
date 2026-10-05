@@ -89,7 +89,7 @@ export const vectaEn: CaseStudy = {
       label: "From IA to wireframes",
       heading: "IA and first wireframes",
       paragraphs: [
-        "The crucial part of this concept was working out **how to group incidents into categories and display them clearly**. The information architecture helped here: it covered other screens too, but the incident classification turned out to be the most useful part.",
+        "Every incident is a labeled example of a situation the autopilot couldn't handle. Classifying incidents by category, type and vehicle model turns a shift's work into a dataset for the ML team and reliability stats for the fleet team. Fewer incidents mean more vehicles per engineer and a lower cost per ride.",
         "I sketched the first ideas on paper and dropped the ones that didn't work along the way, which saved a lot of time. I picked the incident-handling scenario to design and refined the clean wireframe in Figma.",
         "Finding real-world B2B product designs is hard: companies rarely show these interfaces publicly. So I also drew on concepts.",
       ],
