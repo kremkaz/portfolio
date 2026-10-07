@@ -24,10 +24,7 @@ export const tanukiEn: CaseStudy = {
   facts: [
     { label: "Role", value: "Product designer" },
     { label: "Tools", value: "Figma, FigJam, Pathway, Claude Code" },
-    {
-      label: "What I did",
-      value: "quantitative survey, interface design, unmoderated usability testing (split group)",
-    },
+    { label: "Platform", value: "Mobile" },
   ],
   meta: {
     role: "Product designer (personal project)",

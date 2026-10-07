@@ -9,11 +9,7 @@ export const tanuki: CaseStudy = {
   facts: [
     { label: "Роль", value: "продуктовый дизайнер" },
     { label: "Инструменты", value: "Figma, FigJam, Pathway, Claude Code" },
-    {
-      label: "Что делала",
-      value:
-        "количественный опрос, проектирование интерфейса, немодерируемое юзабилити-тестирование (split group)",
-    },
+    { label: "Платформа", value: "mobile" },
   ],
   heroBackground: "#e81d72",
   meta: {

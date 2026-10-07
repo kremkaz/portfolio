@@ -16,7 +16,7 @@ export const vecta: CaseStudy = {
   facts: [
     { label: "Роль", value: "UI-UX дизайнер" },
     { label: "Инструменты", value: "Figma, Perplexity" },
-    { label: "Платформа", value: "десктоп" },
+    { label: "Платформа", value: "desktop" },
   ],
   cover: {
     src: "/cases/vecta/cover-2.webp",
