@@ -62,17 +62,17 @@ export const cases = {
 };
 
 export const skills = {
-  heading: "Навыки и компетенции",
+  heading: "Навыки, компетенции и инструменты",
   hard: {
     label: "hard",
     items: [
       "Figma",
       "AI prototyping",
       "UX research",
-      "usability testing",
-      "продуктовое мышление",
-      "работа с ДС",
-      "адаптивная вёрстка",
+      "Usability testing",
+      "Продуктовое мышление",
+      "Работа с ДС",
+      "Адаптивная вёрстка",
     ],
   },
   soft: {

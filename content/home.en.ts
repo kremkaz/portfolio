@@ -59,17 +59,17 @@ export const homeEn: HomeContent = {
     ],
   },
   skills: {
-    heading: "Skills & strengths",
+    heading: "Skills, strengths and tools",
     hard: {
       label: "hard",
       items: [
         "Figma",
         "AI prototyping",
         "UX research",
-        "usability testing",
-        "product thinking",
-        "design systems",
-        "responsive layout",
+        "Usability testing",
+        "Product thinking",
+        "Design systems",
+        "Responsive layout",
       ],
     },
     soft: {
