@@ -10,7 +10,12 @@ export const vectaEn: CaseStudy = {
   ...vecta,
   backLabel: "Back to case studies",
   backHref: "/en#cases",
-  title: "Vecta — self-driving taxi",
+  title: "Vecta — a service concept for robotaxi engineers",
+  facts: [
+    { label: "Role", value: "UI/UX designer" },
+    { label: "Tools", value: "Figma, Perplexity" },
+    { label: "Platform", value: "Desktop" },
+  ],
   subtitle: "A B2B service concept for robotaxi engineers",
   meta: {
     role: "UI/UX designer",
@@ -22,31 +27,6 @@ export const vectaEn: CaseStudy = {
     vecta.cover,
     "Vecta cover: fleet monitoring dashboard, incident card and a self-driving car mockup",
   ),
-  callout: {
-    title:
-      "The task: design a monitoring service for self-driving cars, used by engineers at a monitoring center.",
-    details: [
-      {
-        intro: "The service should help engineers:",
-        items: [
-          "keep track of every vehicle's condition",
-          "spot problems",
-          "respond to incidents quickly",
-          "decide what to do next",
-        ],
-      },
-      {
-        intro: "Each vehicle can report its:",
-        items: [
-          "battery level",
-          "technical faults",
-          "current status (on a trip / available / charging / out of service)",
-          "location",
-          "system errors",
-        ],
-      },
-    ],
-  },
   stages: [
     {
       ...context,
@@ -54,6 +34,9 @@ export const vectaEn: CaseStudy = {
       heading: "Designing for engineers who watch dozens of cars at once",
       paragraphs: [
         "Vecta is a self-driving taxi service. A team of engineers monitors the fleet remotely and responds to incidents. I worked on this case during my product design internship at T-Bank in 2026.",
+        "A robotaxi offers the same ride as a regular taxi, but **without its biggest expense — the driver.** The catch is that autopilot still can't handle every unusual situation correctly. A car might stop in front of a closed street, lose its connection, miss a traffic officer's hand signal or run out of battery sooner than predicted. **In situations like these, an engineer has to step in.**",
+        "That's why **the key economic factor is how many cars one engineer is responsible for.** If every car needs its own person, a robotaxi costs more than a regular taxi: the company pays for both the autopilot and the staff. **The more cars each engineer can handle, the lower the cost per ride.**",
+        "The size of the fleet is limited by the engineer's attention. Attention is a scarce resource, and it's exactly what Vecta is designed around.",
       ],
     },
     {

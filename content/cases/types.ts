@@ -48,17 +48,6 @@ export type CaseResult = {
   screens: CaseImage[];
 };
 
-export type CaseCalloutGroup = {
-  intro: string;
-  items: string[];
-};
-
-export type CaseCalloutContent = {
-  title: string;
-  /** Полная версия, раскрывается по шеврону. */
-  details?: CaseCalloutGroup[];
-};
-
 export type CaseStudy = {
   slug: string;
   backLabel: string;
@@ -69,7 +58,8 @@ export type CaseStudy = {
   heroBackground: string;
   meta: CaseMeta;
   cover: CaseImage;
-  callout?: CaseCalloutContent;
+  /** Короткие факты о проекте списком под обложкой («Роль: …», «Платформа: …»). */
+  facts?: { label: string; value: string }[];
   stages: CaseStage[];
   result?: CaseResult;
   nextCase: {

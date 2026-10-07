@@ -1,7 +1,6 @@
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { CaseHero } from "@/components/case-study/case-hero";
-import { CaseCallout } from "@/components/case-study/case-callout";
+import { CaseIntro } from "@/components/case-study/case-intro";
 import { CaseGallery } from "@/components/case-study/case-gallery";
 import { NextCaseSection } from "@/components/case-study/next-case-section";
 import {
@@ -19,17 +18,11 @@ export function VectaCasePage({ locale }: { locale: Locale }) {
   const [contextStage, researchStage, hypothesisStage, wireframeStage] = vecta.stages;
 
   return (
-    <div className="flex min-h-full flex-col bg-white">
+    <div className="flex min-h-full flex-col bg-white pt-4 sm:pt-6">
       <SiteHeader />
-      <CaseHero study={vecta} locale={locale} />
+      <CaseIntro study={vecta} />
 
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center gap-20 px-6 pt-10 pb-20 sm:gap-28 sm:pt-14 sm:pb-28">
-        <RevealGroup className="w-full">
-          <RevealItem>
-            <CaseFigure image={vecta.cover} />
-          </RevealItem>
-        </RevealGroup>
-
+      <main className="mx-auto flex w-full max-w-4xl flex-col items-center gap-20 px-6 pt-20 pb-20 sm:gap-28 sm:pt-28 sm:pb-28">
         <CaseStageSection
           number={contextStage.number}
           label={contextStage.label}
@@ -39,7 +32,6 @@ export function VectaCasePage({ locale }: { locale: Locale }) {
             {contextStage.paragraphs.map((paragraph) => (
               <CaseParagraph key={paragraph}>{paragraph}</CaseParagraph>
             ))}
-            {vecta.callout && <CaseCallout {...vecta.callout} locale={locale} />}
           </RevealItem>
         </CaseStageSection>
 
