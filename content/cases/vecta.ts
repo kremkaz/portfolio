@@ -112,25 +112,25 @@ export const vecta: CaseStudy = {
     note: "Нажмите на скриншот, чтобы открыть в полный размер",
     flow: [
       {
-        src: "/cases/vecta/result/flow-1.webp",
+        src: "/cases/vecta/result/flow-1-sq.webp",
         alt: "Обработка инцидента: карточка с деталями машины и картой",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/flow-2.webp",
+        src: "/cases/vecta/result/flow-2-sq.webp",
         alt: "Обработка инцидента: инцидент от оператора, быстрые действия",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/flow-3.webp",
+        src: "/cases/vecta/result/flow-3-sq.webp",
         alt: "Обработка инцидента: подтверждение и передача бригаде",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/flow-4.webp",
+        src: "/cases/vecta/result/flow-4-sq.webp",
         alt: "Обработка инцидента: передача инженеру",
         width: 2000,
         height: 1125,
@@ -138,13 +138,13 @@ export const vecta: CaseStudy = {
     ],
     screens: [
       {
-        src: "/cases/vecta/result/incidents-screen.webp",
+        src: "/cases/vecta/result/incidents-screen-sq.webp",
         alt: "Таблица всех инцидентов",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/settings.webp",
+        src: "/cases/vecta/result/settings-sq.webp",
         alt: "Раздел статистики в настройках",
         width: 2000,
         height: 1125,

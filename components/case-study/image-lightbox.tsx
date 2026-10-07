@@ -110,7 +110,8 @@ export function ImageLightbox({
               animate="center"
               exit="exit"
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className={`relative max-h-full max-w-4xl overflow-hidden sm:rounded-lg ${
+              // Скругление задаётся здесь и не зависит от размера картинки (в самих скриншотах углы прямые).
+              className={`relative max-h-full max-w-4xl overflow-hidden rounded-lg ${
                 multiple ? "cursor-grab active:cursor-grabbing" : ""
               }`}
               onClick={(e) => e.stopPropagation()}
