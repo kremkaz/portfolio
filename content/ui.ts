@@ -12,11 +12,6 @@ const ru = {
   close: "Закрыть",
   prevScreenshot: "Предыдущий скриншот",
   nextScreenshot: "Следующий скриншот",
-  expand: "Развернуть",
-  collapse: "Свернуть",
-  metaRole: "Роль",
-  metaDuration: "Срок",
-  metaType: "Тип",
   emailButton: "Написать на почту",
   /** Кнопка переключения языка: подпись — язык, на который переключаемся. */
   languageSwitch: { label: "EN", ariaLabel: "Switch to English" },
@@ -33,11 +28,6 @@ const en: typeof ru = {
   close: "Close",
   prevScreenshot: "Previous screenshot",
   nextScreenshot: "Next screenshot",
-  expand: "Expand",
-  collapse: "Collapse",
-  metaRole: "Role",
-  metaDuration: "Timeline",
-  metaType: "Type",
   emailButton: "Send an email",
   languageSwitch: { label: "RU", ariaLabel: "Переключить на русский" },
 };

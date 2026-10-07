@@ -6,7 +6,6 @@ import { CaseFigure } from "@/components/case-study/case-stage-section";
 
 /**
  * Верх страницы кейса без цветной подложки: заголовок → обложка → короткие факты списком.
- * Альтернатива CaseHero (цветная шапка с карточкой меты).
  */
 export function CaseIntro({ study }: { study: CaseStudy }) {
   return (

@@ -11,18 +11,11 @@ export const tanuki: CaseStudy = {
     { label: "Инструменты", value: "Figma, FigJam, Pathway, Claude Code" },
     { label: "Платформа", value: "mobile" },
   ],
-  heroBackground: "#e81d72",
-  meta: {
-    role: "Product designer (проект)",
-    duration: "4 недели",
-    type: "B2C",
-    tools: ["Figma", "Pathway", "Google Form", "Miro"],
-  },
   cover: {
-    src: "/cases/tanuki/cover.jpg",
+    src: "/cases/tanuki/cover-2.webp",
     alt: "Обложка кейса Tanuki: три экрана приложения доставки с изменением состава ролла и роллы вокруг",
-    width: 1264,
-    height: 711,
+    width: 2000,
+    height: 1081,
   },
   stages: [
     {

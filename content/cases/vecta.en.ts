@@ -17,12 +17,6 @@ export const vectaEn: CaseStudy = {
     { label: "Platform", value: "Desktop" },
   ],
   subtitle: "A B2B service concept for robotaxi engineers",
-  meta: {
-    role: "UI/UX designer",
-    duration: "2 weeks",
-    type: "B2B / Dashboards",
-    tools: ["Figma", "Miro"],
-  },
   cover: alt(
     vecta.cover,
     "Vecta cover: fleet monitoring dashboard, incident card and a self-driving car mockup",

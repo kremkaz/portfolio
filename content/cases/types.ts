@@ -1,10 +1,3 @@
-export type CaseMeta = {
-  role: string;
-  duration: string;
-  type: string;
-  tools: string[];
-};
-
 export type CaseParagraph = string;
 
 export type CaseImage = {
@@ -54,9 +47,6 @@ export type CaseStudy = {
   backHref: string;
   title: string;
   subtitle: string;
-  /** Цвет фона шапки кейса (сплошной, без градиента). Значения — design-tokens.md, «Шапка кейса». */
-  heroBackground: string;
-  meta: CaseMeta;
   cover: CaseImage;
   /** Короткие факты о проекте списком под обложкой («Роль: …», «Платформа: …»). */
   facts?: { label: string; value: string }[];

@@ -26,12 +26,6 @@ export const tanukiEn: CaseStudy = {
     { label: "Tools", value: "Figma, FigJam, Pathway, Claude Code" },
     { label: "Platform", value: "Mobile" },
   ],
-  meta: {
-    role: "Product designer (personal project)",
-    duration: "4 weeks",
-    type: "B2C",
-    tools: ["Figma", "Pathway", "Google Form", "Miro"],
-  },
   cover: alt(
     tanuki.cover,
     "Tanuki cover: three delivery app screens for customizing a roll, surrounded by rolls",

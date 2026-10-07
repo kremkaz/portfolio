@@ -6,13 +6,6 @@ export const vecta: CaseStudy = {
   backHref: "/#cases",
   title: "Vecta — концепт сервиса для инженеров беспилотного такси",
   subtitle: "Концепт B2B сервиса для инженеров беспилотного такси",
-  heroBackground: "#005170",
-  meta: {
-    role: "UI/UX дизайнер",
-    duration: "2 недели",
-    type: "B2B / Дашборды",
-    tools: ["Figma", "Miro"],
-  },
   facts: [
     { label: "Роль", value: "UI-UX дизайнер" },
     { label: "Инструменты", value: "Figma, Perplexity" },
