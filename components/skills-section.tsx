@@ -39,8 +39,8 @@ export function SkillsSection({ locale }: { locale: Locale }) {
   // Чипсы полупрозрачные, как теги в карточках кейсов.
   const groups = [
     { key: "hard", ...skills.hard, className: "bg-primary/[0.07] text-primary", firstTiltsLeft: true },
-    { key: "soft", ...skills.soft, className: "bg-[#FF2D85]/[0.07] text-[#FF2D85]", firstTiltsLeft: false },
-    { key: "tools", ...skills.tools, className: "bg-black/[0.07] text-[#111212]", firstTiltsLeft: false },
+    { key: "soft", ...skills.soft, className: "bg-primary/[0.07] text-primary", firstTiltsLeft: false },
+    { key: "tools", ...skills.tools, className: "bg-primary/[0.07] text-primary", firstTiltsLeft: false },
   ];
 
   return (

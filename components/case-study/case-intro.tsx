@@ -10,7 +10,7 @@ import { CaseFigure } from "@/components/case-study/case-stage-section";
  */
 export function CaseIntro({ study }: { study: CaseStudy }) {
   return (
-    <section className="w-full px-6 pt-12 sm:pt-16">
+    <section className="w-full px-6 pt-6 sm:pt-8">
       <RevealGroup className="mx-auto flex w-full max-w-4xl flex-col items-start gap-8 sm:gap-10">
         <RevealItem className="flex flex-col items-start gap-6">
           <Link

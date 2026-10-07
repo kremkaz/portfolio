@@ -1,31 +1,25 @@
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { CaseHero } from "@/components/case-study/case-hero";
+import { CaseIntro } from "@/components/case-study/case-intro";
 import { CaseGallery } from "@/components/case-study/case-gallery";
 import { NextCaseSection } from "@/components/case-study/next-case-section";
 import {
   CaseBlocks,
-  CaseFigure,
   CaseParagraph,
   CaseStageSection,
 } from "@/components/case-study/case-stage-section";
-import { RevealGroup, RevealItem } from "@/components/motion/reveal";
+import { RevealItem } from "@/components/motion/reveal";
 import { caseStudies } from "@/content/cases";
 import type { Locale } from "@/lib/i18n";
 
 export function TanukiCasePage({ locale }: { locale: Locale }) {
   const tanuki = caseStudies.tanuki[locale];
   return (
-    <div className="flex min-h-full flex-col bg-white">
+    <div className="flex min-h-full flex-col bg-white pt-4 sm:pt-6">
       <SiteHeader />
-      <CaseHero study={tanuki} locale={locale} />
+      <CaseIntro study={tanuki} />
 
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center gap-20 px-6 pt-10 pb-20 sm:gap-28 sm:pt-14 sm:pb-28">
-        <RevealGroup className="w-full">
-          <RevealItem>
-            <CaseFigure image={tanuki.cover} bordered={false} />
-          </RevealItem>
-        </RevealGroup>
+      <main className="mx-auto flex w-full max-w-4xl flex-col items-center gap-20 px-6 pt-20 pb-20 sm:gap-28 sm:pt-28 sm:pb-28">
 
         {tanuki.stages.map((stage) => (
           <CaseStageSection

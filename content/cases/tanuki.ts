@@ -6,6 +6,15 @@ export const tanuki: CaseStudy = {
   backHref: "/#cases",
   title: "Tanuki доставка — изменить блюдо",
   subtitle: "Фича для изменения состава блюда",
+  facts: [
+    { label: "Роль", value: "продуктовый дизайнер" },
+    { label: "Инструменты", value: "Figma, FigJam, Pathway, Claude Code" },
+    {
+      label: "Что делала",
+      value:
+        "количественный опрос, проектирование интерфейса, немодерируемое юзабилити-тестирование (split group)",
+    },
+  ],
   heroBackground: "#e81d72",
   meta: {
     role: "Product designer (проект)",

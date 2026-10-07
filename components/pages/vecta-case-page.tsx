@@ -9,7 +9,7 @@ import {
   CaseParagraph,
   CaseStageSection,
 } from "@/components/case-study/case-stage-section";
-import { RevealGroup, RevealItem } from "@/components/motion/reveal";
+import { RevealItem } from "@/components/motion/reveal";
 import { caseStudies } from "@/content/cases";
 import type { Locale } from "@/lib/i18n";
 
@@ -67,7 +67,7 @@ export function VectaCasePage({ locale }: { locale: Locale }) {
           </RevealItem>
           {hypothesisStage.image && (
             <RevealItem className="w-full">
-              <CaseFigure image={hypothesisStage.image} />
+              <CaseFigure image={hypothesisStage.image} bordered={false} />
             </RevealItem>
           )}
         </CaseStageSection>

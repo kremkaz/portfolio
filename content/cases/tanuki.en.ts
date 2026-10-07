@@ -21,6 +21,14 @@ export const tanukiEn: CaseStudy = {
   backHref: "/en#cases",
   title: "Tanuki delivery — customize a dish",
   subtitle: "A feature for changing what goes into a dish",
+  facts: [
+    { label: "Role", value: "Product designer" },
+    { label: "Tools", value: "Figma, FigJam, Pathway, Claude Code" },
+    {
+      label: "What I did",
+      value: "quantitative survey, interface design, unmoderated usability testing (split group)",
+    },
+  ],
   meta: {
     role: "Product designer (personal project)",
     duration: "4 weeks",
