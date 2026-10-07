@@ -75,12 +75,12 @@ export const homeEn: HomeContent = {
     soft: {
       label: "soft",
       items: [
-        "self-driven",
-        "super friendly",
-        "engaged and curious",
-        "takes initiative",
-        "loves teamwork",
-        "open to feedback",
+        "Self-driven",
+        "Super friendly",
+        "Engaged and curious",
+        "Takes initiative",
+        "Loves teamwork",
+        "Open to feedback",
       ],
     },
     tools: {

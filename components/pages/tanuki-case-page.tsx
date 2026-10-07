@@ -19,7 +19,7 @@ export function TanukiCasePage({ locale }: { locale: Locale }) {
       <SiteHeader />
       <CaseIntro study={tanuki} />
 
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center gap-20 px-6 pt-20 pb-20 sm:gap-28 sm:pt-28 sm:pb-28">
+      <main className="mx-auto flex w-full max-w-4xl flex-col items-center gap-16 px-6 pt-16 pb-16 sm:gap-20 sm:pt-20 sm:pb-20">
 
         {tanuki.stages.map((stage) => (
           <CaseStageSection

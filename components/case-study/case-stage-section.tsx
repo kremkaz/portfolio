@@ -75,7 +75,7 @@ export function CaseStats({ items }: { items: CaseStat[] }) {
     <div className="flex w-full flex-wrap justify-center gap-x-10 gap-y-6 py-2">
       {items.map((stat) => (
         <div key={stat.value} className="flex w-[140px] flex-col items-center gap-3 text-center">
-          <span className="rounded-full bg-[#FF2D85] px-8 py-4 text-2xl leading-7 font-semibold text-white">
+          <span className="rounded-full bg-primary/[0.07] px-8 py-4 text-2xl leading-7 font-semibold text-primary">
             {stat.value}
           </span>
           <span className="text-base leading-[19px] text-[#909090]">{stat.label}</span>

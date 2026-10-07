@@ -39,7 +39,7 @@ export function CaseGallery({ result, locale }: { result: CaseResult; locale: Lo
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full scroll-mt-28 px-6 pb-20 sm:pb-28">
+    <section className="w-full scroll-mt-28 px-6 pb-16 sm:pb-20">
       <RevealGroup className="mx-auto flex w-full max-w-4xl flex-col items-start gap-10">
         <RevealItem className="flex w-full flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div className="flex flex-col gap-3">
