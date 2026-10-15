@@ -1,3 +1,4 @@
+import { profilePhoto } from "./site";
 import type { Locale } from "@/lib/i18n";
 import { homeEn } from "./home.en";
 
@@ -18,7 +19,7 @@ export const hero = {
     "Профильное образование и широкий кругозор. Люблю пользовательский опыт, людей и технологии <3",
     "С интересом берусь за новые проекты, регулярно прохожу курсы для углубления в отдельные темы и слежу за индустрией.",
   ],
-  photo: "/home/hero-photo-autumn.jpg",
+  photo: profilePhoto.src,
 };
 
 export type CaseStatus = "published" | "in-progress";
