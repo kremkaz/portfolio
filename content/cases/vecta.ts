@@ -103,6 +103,12 @@ export const vecta: CaseStudy = {
   result: {
     heading: "Результат",
     note: "Нажмите на скриншот, чтобы открыть в полный размер",
+    showcase: {
+      src: "/cases/vecta/result/showcase.webp",
+      alt: "Мокап: таблица инцидентов Vecta на мониторе, на фоне — беспилотный автомобиль",
+      width: 1671,
+      height: 941,
+    },
     flow: [
       {
         src: "/cases/vecta/result/flow-1-sq.webp",

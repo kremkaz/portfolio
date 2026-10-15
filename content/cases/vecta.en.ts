@@ -19,7 +19,7 @@ export const vectaEn: CaseStudy = {
   subtitle: "A B2B service concept for robotaxi engineers",
   cover: alt(
     vecta.cover,
-    "Vecta cover: fleet monitoring dashboard, incident card and a self-driving car mockup",
+    "Vecta cover: fleet monitoring dashboard, incident card and a robotaxi mockup",
   ),
   stages: [
     {
@@ -27,7 +27,7 @@ export const vectaEn: CaseStudy = {
       label: "Context & task",
       heading: "Designing for engineers who watch dozens of cars at once",
       paragraphs: [
-        "Vecta is a self-driving taxi service. A team of engineers monitors the fleet remotely and responds to incidents. I worked on this case during my product design internship at T-Bank in 2026.",
+        "Vecta is a robotaxi service. A team of engineers monitors the fleet remotely and responds to incidents. I worked on this case during my product design internship at T-Bank in 2026.",
         "A robotaxi offers the same ride as a regular taxi, but **without its biggest expense — the driver.** The catch is that autopilot still can't handle every unusual situation correctly. A car might stop in front of a closed street, lose its connection, miss a traffic officer's hand signal or run out of battery sooner than predicted. **In situations like these, an engineer has to step in.**",
         "That's why **the key economic factor is how many cars one engineer is responsible for.** If every car needs its own person, a robotaxi costs more than a regular taxi: the company pays for both the autopilot and the staff. **The more cars each engineer can handle, the lower the cost per ride.**",
         "The size of the fleet is limited by the engineer's attention. Attention is a scarce resource, and it's exactly what Vecta is designed around.",
@@ -44,7 +44,7 @@ export const vectaEn: CaseStudy = {
       ],
       aside: "This will shape the interface later 🦋",
       images: [
-        alt(research.images?.[0], "A self-driving car on a test ride"),
+        alt(research.images?.[0], "A robotaxi on a test ride"),
         alt(research.images?.[1], "A review of a Waymo robotaxi ride"),
       ],
     },
@@ -87,6 +87,10 @@ export const vectaEn: CaseStudy = {
     ...vecta.result,
     heading: "Result",
     note: "Click a screenshot to see it full size",
+    showcase: alt(
+      vecta.result.showcase,
+      "Mockup: the Vecta incidents table on a monitor, with a robotaxi in the background",
+    ),
     flow: [
       alt(vecta.result.flow[0], "Incident handling: vehicle details card and map"),
       alt(vecta.result.flow[1], "Incident handling: an operator-reported incident with quick actions"),

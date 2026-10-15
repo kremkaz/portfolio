@@ -136,6 +136,7 @@ export const tanukiEn: CaseStudy = {
     ...tanuki.result!,
     heading: "Result",
     note: "Click a screenshot to see it full size",
+    showcase: alt(tanuki.result!.showcase, "Mockup: the roll customization screen on an iPhone"),
     flow: [
       alt(shots[0], "Roll card with the “Change ingredients” button"),
       alt(shots[1], "Customization screen: add-ons, ingredient swaps and an automatically removed allergen"),

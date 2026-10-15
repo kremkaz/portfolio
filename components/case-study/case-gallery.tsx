@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { StageLabel } from "@/components/case-study/stage-label";
 import { ImageLightbox } from "@/components/case-study/image-lightbox";
@@ -13,16 +13,19 @@ import { asset } from "@/lib/asset";
 function GalleryTile({
   image,
   className = "",
+  style,
   onOpen,
 }: {
   image: CaseImage;
   className?: string;
+  style?: CSSProperties;
   onOpen: () => void;
 }) {
   return (
     <button
       type="button"
       onClick={onOpen}
+      style={style}
       className={`relative overflow-hidden bg-[#F5F5F7] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] ${className}`}
     >
       <Image src={asset(image.src)} alt={image.alt} fill className="object-cover" />
@@ -32,7 +35,10 @@ function GalleryTile({
 
 export function CaseGallery({ result, locale }: { result: CaseResult; locale: Locale }) {
   const t = ui[locale];
-  const images = [...result.flow, ...result.screens];
+  const showcase = result.showcase;
+  // Мокап (если есть) идёт в просмотре первым, дальше — скриншоты по порядку.
+  const images = [...(showcase ? [showcase] : []), ...result.flow, ...result.screens];
+  const offset = showcase ? 1 : 0;
   const portrait = result.orientation === "portrait";
   const gridClass = portrait ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-1 sm:grid-cols-2";
   const tileClass = portrait ? "aspect-[23/50] rounded-2xl" : "aspect-video rounded-lg";
@@ -51,13 +57,24 @@ export function CaseGallery({ result, locale }: { result: CaseResult; locale: Lo
           <p className="max-w-[280px] text-sm text-[#888] sm:text-right">{result.note}</p>
         </RevealItem>
 
+        {showcase && (
+          <RevealItem className="w-full">
+            <GalleryTile
+              image={showcase}
+              className="w-full rounded-2xl"
+              style={{ aspectRatio: `${showcase.width} / ${showcase.height}` }}
+              onOpen={() => setSelectedIndex(0)}
+            />
+          </RevealItem>
+        )}
+
         <RevealItem className={`grid w-full gap-4 ${gridClass}`}>
           {result.flow.map((image, i) => (
             <GalleryTile
               key={`${image.src}-${i}`}
               image={image}
               className={tileClass}
-              onOpen={() => setSelectedIndex(i)}
+              onOpen={() => setSelectedIndex(offset + i)}
             />
           ))}
         </RevealItem>
@@ -69,7 +86,7 @@ export function CaseGallery({ result, locale }: { result: CaseResult; locale: Lo
                 key={`${image.src}-${i}`}
                 image={image}
                 className={tileClass}
-                onOpen={() => setSelectedIndex(result.flow.length + i)}
+                onOpen={() => setSelectedIndex(offset + result.flow.length + i)}
               />
             ))}
           </RevealItem>
