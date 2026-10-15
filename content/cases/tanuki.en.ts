@@ -117,7 +117,7 @@ export const tanukiEn: CaseStudy = {
           type: "image",
           image: alt(
             stageImage(3),
-            "Entry point options for editing a dish from the cart: “Could be like this”, “Like this” and “Or like this”",
+            "A first-click heatmap of the cart and entry point options for editing a dish: “Could be like this”, “Like this” and “Or like this”",
           ),
           bordered: false,
         },

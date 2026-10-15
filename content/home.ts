@@ -33,7 +33,7 @@ export const cases = {
       subtitle: "Мониторинг флота и обработка инцидентов",
       description:
         "Тестовое на стажировку в Т-Банк. B2B-концепт: как одному инженеру следить за десятками машин.",
-      cover: "/home/case-cover-vecta.webp",
+      cover: "/home/vecta-card-cover.webp",
       year: "2026",
       status: "published" as CaseStatus,
       href: "/cases/vecta",
@@ -44,7 +44,7 @@ export const cases = {
       subtitle: "Кастомизация ингредиентов в доставке еды",
       description:
         "Создание флоу кастомизации ролла: выбор ингредиентов, исключение предпочтений и аллергенов.",
-      cover: "/home/case-cover-tanuki.webp",
+      cover: "/home/tanuki-card-cover.webp",
       year: "2026",
       status: "published" as CaseStatus,
       href: "/cases/tanuki",
@@ -54,7 +54,7 @@ export const cases = {
       title: "BusTime — мониторинг общественного транспорта",
       subtitle: "Просмотр автобусов и не только по всему миру",
       description: "Переработка навигации + немного визуала.",
-      cover: "/home/case-cover-bustime.jpg",
+      cover: "/home/bustime-card-cover.jpg",
       year: null,
       status: "in-progress" as CaseStatus,
       href: null,

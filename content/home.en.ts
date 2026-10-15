@@ -31,7 +31,7 @@ export const homeEn: HomeContent = {
         subtitle: "Fleet monitoring and incident management",
         description:
           "Test assignment for a T-Bank internship. A B2B concept: how one engineer can keep track of dozens of cars.",
-        cover: "/home/case-cover-vecta.webp",
+        cover: "/home/vecta-card-cover.webp",
         year: "2026",
         status: "published" as CaseStatus,
         href: "/en/cases/vecta",
@@ -42,7 +42,7 @@ export const homeEn: HomeContent = {
         subtitle: "Ingredient customization for food delivery",
         description:
           "A flow for customizing a roll: picking ingredients, leaving out what you don't like and flagging allergens.",
-        cover: "/home/case-cover-tanuki.webp",
+        cover: "/home/tanuki-card-cover.webp",
         year: "2026",
         status: "published" as CaseStatus,
         href: "/en/cases/tanuki",
@@ -52,7 +52,7 @@ export const homeEn: HomeContent = {
         title: "BusTime — public transport tracking",
         subtitle: "Tracking buses and more, anywhere in the world",
         description: "Reworking the navigation, plus a little visual polish.",
-        cover: "/home/case-cover-bustime.jpg",
+        cover: "/home/bustime-card-cover.jpg",
         year: null,
         status: "in-progress" as CaseStatus,
         href: null,

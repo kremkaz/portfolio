@@ -12,7 +12,7 @@ export const vecta: CaseStudy = {
     { label: "Платформа", value: "desktop" },
   ],
   cover: {
-    src: "/cases/vecta/cover-2.webp",
+    src: "/cases/vecta/vecta-cover.webp",
     alt: "Обложка кейса Vecta: дашборд мониторинга флота, карточка инцидента и мокап беспилотного автомобиля",
     width: 2000,
     height: 853,
@@ -41,13 +41,13 @@ export const vecta: CaseStudy = {
       aside: "Позже это повлияет на интерфейс 🦋",
       images: [
         {
-          src: "/cases/vecta/research-car.jpg",
+          src: "/cases/vecta/vecta-research-robotaxi.jpg",
           alt: "Беспилотный автомобиль на тестовой поездке",
           width: 900,
           height: 506,
         },
         {
-          src: "/cases/vecta/research-video.jpg",
+          src: "/cases/vecta/vecta-research-waymo-ride.jpg",
           alt: "Обзор поездки на беспилотном такси Waymo",
           width: 900,
           height: 494,
@@ -63,7 +63,7 @@ export const vecta: CaseStudy = {
         "Также в инциденте должно быть наглядное упоминание, если он поступил **от оператора:** такие инциденты будут валидироваться приоритетнее и требовать более быстрого реагирования.",
       ],
       image: {
-        src: "/cases/vecta/hypothesis-before-after-2.webp",
+        src: "/cases/vecta/vecta-incident-card-before-after.webp",
         alt: "До и после: карточка инцидента — было с текстовыми полями и чекбоксами, стало с быстрыми тег-действиями",
         width: 2000,
         height: 1046,
@@ -80,19 +80,19 @@ export const vecta: CaseStudy = {
       ],
       images: [
         {
-          src: "/cases/vecta/ia-categories-2.png",
+          src: "/cases/vecta/vecta-incident-categories.png",
           alt: "Информационная архитектура категорий инцидентов: движение, механика и ПО, энергетика, внешние",
           width: 1812,
           height: 993,
         },
         {
-          src: "/cases/vecta/sketch-photo.jpg",
+          src: "/cases/vecta/vecta-wireframe-sketches.jpg",
           alt: "Скетчи вайрфреймов сценария обработки инцидента на бумаге",
           width: 900,
           height: 1200,
         },
         {
-          src: "/cases/vecta/references.webp",
+          src: "/cases/vecta/vecta-references.webp",
           alt: "Референсы: дашборды мониторинга флота с картой, списком машин и уведомлениями",
           width: 1304,
           height: 2000,
@@ -105,25 +105,25 @@ export const vecta: CaseStudy = {
     note: "Нажмите на скриншот, чтобы открыть в полный размер",
     flow: [
       {
-        src: "/cases/vecta/result/flow-1-sq.webp",
+        src: "/cases/vecta/result/vecta-incident-1-map.webp",
         alt: "Обработка инцидента: карточка с деталями машины и картой",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/flow-2-sq.webp",
+        src: "/cases/vecta/result/vecta-incident-2-actions.webp",
         alt: "Обработка инцидента: инцидент от оператора, быстрые действия",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/flow-3-sq.webp",
+        src: "/cases/vecta/result/vecta-incident-3-note.webp",
         alt: "Обработка инцидента: подтверждение и передача бригаде",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/flow-4-sq.webp",
+        src: "/cases/vecta/result/vecta-incident-4-resolved.webp",
         alt: "Обработка инцидента: передача инженеру",
         width: 2000,
         height: 1125,
@@ -131,13 +131,13 @@ export const vecta: CaseStudy = {
     ],
     screens: [
       {
-        src: "/cases/vecta/result/incidents-screen-sq.webp",
+        src: "/cases/vecta/result/vecta-incidents-table.webp",
         alt: "Таблица всех инцидентов",
         width: 2000,
         height: 1125,
       },
       {
-        src: "/cases/vecta/result/settings-sq.webp",
+        src: "/cases/vecta/result/vecta-statistics.webp",
         alt: "Раздел статистики в настройках",
         width: 2000,
         height: 1125,
