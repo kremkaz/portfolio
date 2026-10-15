@@ -105,7 +105,7 @@ export const skills = {
 
 /** Почта: ссылка открывает черновик письма с темой и одновременно копирует адрес. */
 export const email = {
-  address: "kremkazzz@gmail.com",
+  address: "evgenia_artyushina@mail.ru",
   subject: "Письмо из портфолио",
   copiedMessage: "Почта скопирована",
 };

@@ -1,7 +1,7 @@
 import { profilePhoto } from "./site";
 import type { CaseStatus, HomeContent } from "./home";
 
-const emailAddress = "kremkazzz@gmail.com";
+const emailAddress = "evgenia_artyushina@mail.ru";
 
 /** Английская версия главной. Структура та же, что у русской в home.ts. */
 export const homeEn: HomeContent = {
