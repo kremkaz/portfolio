@@ -9,7 +9,7 @@ export const nav = {
     { label: "Кейсы", href: "#cases" },
     { label: "Навыки", href: "#skills" },
   ],
-  socials: [{ label: "Telegram", href: "https://t.me/kremka_zzz", icon: "telegram" as const }],
+  socials: [{ label: "Telegram", href: "https://t.me/ArtyushinaEvgenia", icon: "telegram" as const }],
 };
 
 export const hero = {
@@ -114,7 +114,7 @@ export const contactCta = {
   heading: "Давайте вместе делать что-то классное :)",
   subheading: "Напишите мне — отвечу в течение дня",
   links: [
-    { label: "t.me/kremka_zzz", href: "https://t.me/kremka_zzz", icon: "telegram" as const },
+    { label: "t.me/ArtyushinaEvgenia", href: "https://t.me/ArtyushinaEvgenia", icon: "telegram" as const },
     { label: email.address, href: `mailto:${email.address}`, icon: "mail" as const },
   ],
 };
@@ -122,7 +122,7 @@ export const contactCta = {
 export const footer = {
   copyright: "© 2026 Евгения Артюшина",
   contactsLabel: "Контакты",
-  telegram: "t.me/kremka_zzz",
+  telegram: "t.me/ArtyushinaEvgenia",
 };
 
 const homeRu = { nav, hero, cases, skills, email, contactCta, footer };

@@ -11,7 +11,7 @@ export const homeEn: HomeContent = {
       { label: "Work", href: "#cases" },
       { label: "Skills", href: "#skills" },
     ],
-    socials: [{ label: "Telegram", href: "https://t.me/kremka_zzz", icon: "telegram" as const }],
+    socials: [{ label: "Telegram", href: "https://t.me/ArtyushinaEvgenia", icon: "telegram" as const }],
   },
   hero: {
     name: "Evgenia Artyushina",
@@ -108,13 +108,13 @@ export const homeEn: HomeContent = {
     heading: "Let’s create something nice together :)",
     subheading: "Drop me a line — I'll get back to you within a day",
     links: [
-      { label: "t.me/kremka_zzz", href: "https://t.me/kremka_zzz", icon: "telegram" as const },
+      { label: "t.me/ArtyushinaEvgenia", href: "https://t.me/ArtyushinaEvgenia", icon: "telegram" as const },
       { label: emailAddress, href: `mailto:${emailAddress}`, icon: "mail" as const },
     ],
   },
   footer: {
     copyright: "© 2026 Evgenia Artyushina",
     contactsLabel: "Contacts",
-    telegram: "t.me/kremka_zzz",
+    telegram: "t.me/ArtyushinaEvgenia",
   },
 };
