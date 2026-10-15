@@ -34,10 +34,10 @@ export const tanukiEn: CaseStudy = {
     {
       ...context,
       label: "Context & task",
-      heading: "Taking the load off delivery operators",
+      heading: "Customizing a dish",
       paragraphs: [
         "Tanuki is a delivery app for ordering from the Tanuki restaurant chain and its partners.",
-        "One evening, while ordering rolls, I wanted to drop the sesame and tweak the ingredients a little. Most apps let you do that easily. I couldn't find the option here, and support confirmed it didn't exist.",
+        "One evening, while ordering rolls, I wanted to drop the sesame and tweak the ingredients a little. Most apps let you do that easily. I couldn't find the option here, and support confirmed it: the only way to change an order is to leave a delivery comment.",
         "**That became the idea for this case: design a dish customization feature for the Tanuki delivery app**",
       ],
     },
@@ -48,7 +48,7 @@ export const tanukiEn: CaseStudy = {
       blocks: [
         {
           type: "paragraph",
-          text: "Exploring the app, I found that you can leave a comment that both the courier and the kitchen see. My hypothesis: **letting people customize a dish would take load off operators and cut down on mistakes in orders.**",
+          text: "Exploring the app, I found that you can indeed leave a comment that both the courier and the kitchen see. My hypothesis: **letting people customize a dish would take load off operators and cut down on mistakes in orders.**",
         },
         {
           type: "image",
