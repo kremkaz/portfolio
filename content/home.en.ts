@@ -18,7 +18,7 @@ export const homeEn: HomeContent = {
     role: "Product Designer | UX/UI",
     bio: [
       "A design degree and a wide range of interests. I love UX, people and technology <3",
-      "I get excited about new projects, regularly take courses to go deeper into specific topics, and keep up with the industry.",
+      "I get excited about new projects, regularly take courses to go deeper into specific topics, and keep up with the industry — Yandex Product Fest, UX CX Conf, Masshtab (HSE University).",
     ],
     photo: profilePhoto.src,
   },
@@ -27,10 +27,10 @@ export const homeEn: HomeContent = {
     items: [
       {
         tags: ["B2B", "Desktop"],
-        title: "Engineering product concept",
-        subtitle: "Vecta — a B2B tool for robotaxi engineers",
+        title: "Vecta — a service for robotaxi engineers",
+        subtitle: "Fleet monitoring and incident management",
         description:
-          "A fleet monitoring and incident management system. Test assignment for a T-Bank internship.",
+          "Test assignment for a T-Bank internship. A B2B concept: how one engineer can keep track of dozens of cars.",
         cover: "/home/case-cover-vecta.webp",
         year: "2026",
         status: "published" as CaseStatus,
@@ -38,7 +38,7 @@ export const homeEn: HomeContent = {
       },
       {
         tags: ["B2C", "Mobile"],
-        title: "Tanuki — build your own dish",
+        title: "Tanuki — customizing a dish",
         subtitle: "Ingredient customization for food delivery",
         description:
           "A flow for customizing a roll: picking ingredients, leaving out what you don't like and flagging allergens.",
@@ -49,8 +49,8 @@ export const homeEn: HomeContent = {
       },
       {
         tags: ["B2C", "Desktop"],
-        title: "Public transport tracking",
-        subtitle: "BusTime — follow buses and more, anywhere in the world.",
+        title: "BusTime — public transport tracking",
+        subtitle: "Tracking buses and more, anywhere in the world",
         description: "Reworking the navigation, plus a little visual polish.",
         cover: "/home/case-cover-bustime.jpg",
         year: null,
@@ -64,7 +64,6 @@ export const homeEn: HomeContent = {
     hard: {
       label: "hard",
       items: [
-        "Figma",
         "AI prototyping",
         "UX research",
         "Usability testing",

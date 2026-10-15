@@ -19,8 +19,8 @@ export const tanukiEn: CaseStudy = {
   ...tanuki,
   backLabel: "Back to case studies",
   backHref: "/en#cases",
-  title: "Tanuki delivery — customize a dish",
-  subtitle: "A feature for changing what goes into a dish",
+  title: "Tanuki — customizing a dish",
+  subtitle: "Ingredient customization for food delivery",
   facts: [
     { label: "Role", value: "Product designer" },
     { label: "Tools", value: "Figma, FigJam, Pathway, Claude Code" },
@@ -38,7 +38,7 @@ export const tanukiEn: CaseStudy = {
       paragraphs: [
         "Tanuki is a delivery app for ordering from the Tanuki restaurant chain and its partners.",
         "One evening, while ordering rolls, I wanted to drop the sesame and tweak the ingredients a little. Most apps let you do that easily. I couldn't find the option here, and support confirmed it: the only way to change an order is to leave a delivery comment.",
-        "**That became the idea for this case: design a dish customization feature for the Tanuki delivery app**",
+        "**That became the idea for this case: design a dish customization feature for the Tanuki delivery app.**",
       ],
     },
     {
@@ -61,7 +61,7 @@ export const tanukiEn: CaseStudy = {
         { type: "subheading", text: "Is this a real problem?" },
         {
           type: "paragraph",
-          text: "I ran a survey: most people have taste preferences, and some have allergies. More than half had received their order unchanged after asking an operator or leaving a comment.",
+          text: "I surveyed 55 respondents: most people have taste preferences, and some have allergies. More than half had received their order unchanged after asking an operator or leaving a comment.",
         },
         {
           type: "stats",
@@ -127,7 +127,7 @@ export const tanukiEn: CaseStudy = {
         },
         {
           type: "paragraph",
-          text: "The interviews showed that people are used to simply tapping the line they want to change. It's a behavior that doesn't need its own element in the interface.",
+          text: "The interviews showed that people are used to simply tapping the line they want to change. So a separate button wasn't needed: **I made the whole dish row in the cart tappable.**",
         },
       ],
     },
@@ -149,7 +149,7 @@ export const tanukiEn: CaseStudy = {
   },
   nextCase: {
     title: "BusTime — public transport tracking",
-    subtitle: "Reworking the navigation, plus a little visual polish",
+    subtitle: "Tracking buses and more, anywhere in the world",
     href: "/en/cases/bustime",
   },
 };
