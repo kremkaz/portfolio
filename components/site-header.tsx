@@ -147,7 +147,7 @@ export function SiteHeader() {
             ariaLabel={t.emailButton}
             className="flex size-10 items-center justify-center rounded-full bg-[#F7F7F9] text-primary transition-colors hover:bg-background-section-hover hover:text-primary-hover sm:size-11"
           >
-            <Icon src="/home/icon-nav-social-2.svg" className="size-4.5 sm:size-5" />
+            <Icon src="/home/icon-mail-round.svg" className="size-4.5 sm:size-5" />
           </EmailLink>
         </div>
       </header>

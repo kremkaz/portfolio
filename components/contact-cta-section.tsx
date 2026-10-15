@@ -6,7 +6,7 @@ import { Icon } from "@/components/icon";
 
 const icons = {
   telegram: "/home/icon-telegram.svg",
-  mail: "/home/icon-mail.svg",
+  mail: "/home/icon-mail-round.svg",
 } as const;
 
 export function ContactCtaSection({ locale }: { locale: Locale }) {
