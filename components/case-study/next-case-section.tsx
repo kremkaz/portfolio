@@ -27,7 +27,7 @@ export function NextCaseSection({
             className="group flex w-full items-center justify-between gap-6 rounded-2xl bg-[#F7F7F9] px-8 py-9 transition-colors hover:bg-background-section-hover"
           >
             <div className="flex flex-col gap-1">
-              <p className="text-2xl font-extrabold tracking-tight text-[#0A0A0A] sm:text-3xl">
+              <p className="text-2xl font-semibold tracking-tight text-[#0A0A0A] sm:text-3xl">
                 {next.title}
               </p>
               <p className="text-[15px] text-[#888]">{next.subtitle}</p>

@@ -16,7 +16,7 @@ export function ContactCtaSection({ locale }: { locale: Locale }) {
     <section id="contact" className="w-full scroll-mt-8 bg-primary px-6 py-20 sm:py-28">
       <RevealGroup className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
         <RevealItem>
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
             {contactCta.heading}
           </h2>
         </RevealItem>
