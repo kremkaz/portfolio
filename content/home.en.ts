@@ -31,7 +31,7 @@ export const homeEn: HomeContent = {
         subtitle: "Vecta — a B2B tool for robotaxi engineers",
         description:
           "A fleet monitoring and incident management system. Test assignment for a T-Bank internship.",
-        cover: "/home/case-cover-vecta.jpg",
+        cover: "/home/case-cover-vecta.webp",
         year: "2026",
         status: "published" as CaseStatus,
         href: "/en/cases/vecta",
@@ -42,7 +42,7 @@ export const homeEn: HomeContent = {
         subtitle: "Ingredient customization for food delivery",
         description:
           "A flow for customizing a roll: picking ingredients, leaving out what you don't like and flagging allergens.",
-        cover: "/home/case-cover-tanuki.jpg",
+        cover: "/home/case-cover-tanuki.webp",
         year: "2026",
         status: "published" as CaseStatus,
         href: "/en/cases/tanuki",

@@ -132,12 +132,6 @@ export const tanuki: CaseStudy = {
     orientation: "portrait",
     heading: "Результат",
     note: "Нажмите на скриншот, чтобы открыть в полный размер",
-    showcase: {
-      src: "/cases/tanuki/result/showcase.webp",
-      alt: "Мокап: экран изменения состава ролла на iPhone",
-      width: 2000,
-      height: 1333,
-    },
     flow: [
       {
         src: "/cases/tanuki/result/screen-1.webp",

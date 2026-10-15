@@ -33,7 +33,7 @@ export const cases = {
       subtitle: "Vecta — B2B для инженеров беспилотного такси",
       description:
         "Система мониторинга флота и обработки инцидентов. Тестовое на стажировку в Т-банк.",
-      cover: "/home/case-cover-vecta.jpg",
+      cover: "/home/case-cover-vecta.webp",
       year: "2026",
       status: "published" as CaseStatus,
       href: "/cases/vecta",
@@ -44,7 +44,7 @@ export const cases = {
       subtitle: "Кастомизация ингредиентов в доставке еды",
       description:
         "Создание флоу кастомизации ролла: выбор ингредиентов, исключение предпочтений и аллергенов.",
-      cover: "/home/case-cover-tanuki.jpg",
+      cover: "/home/case-cover-tanuki.webp",
       year: "2026",
       status: "published" as CaseStatus,
       href: "/cases/tanuki",

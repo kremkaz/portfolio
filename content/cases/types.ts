@@ -35,8 +35,6 @@ export type CaseResult = {
   orientation?: "landscape" | "portrait";
   heading: string;
   note: string;
-  /** Крупный мокап на всю ширину над сеткой скриншотов (открывается в просмотре первым). */
-  showcase?: CaseImage;
   /** Основной флоу — несколько состояний одного экрана, показываются вместе. */
   flow: CaseImage[];
   /** Полноразмерные самостоятельные экраны. */

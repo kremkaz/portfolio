@@ -87,10 +87,6 @@ export const vectaEn: CaseStudy = {
     ...vecta.result,
     heading: "Result",
     note: "Click a screenshot to see it full size",
-    showcase: alt(
-      vecta.result.showcase,
-      "Mockup: the Vecta incidents table on a monitor, with a robotaxi in the background",
-    ),
     flow: [
       alt(vecta.result.flow[0], "Incident handling: vehicle details card and map"),
       alt(vecta.result.flow[1], "Incident handling: an operator-reported incident with quick actions"),
