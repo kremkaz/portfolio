@@ -5,6 +5,7 @@ import { useState } from "react";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { StageLabel } from "@/components/case-study/stage-label";
 import { ImageLightbox } from "@/components/case-study/image-lightbox";
+import { CaseBlocks } from "@/components/case-study/case-stage-section";
 import type { CaseImage, CaseResult } from "@/content/cases/types";
 import { ui } from "@/content/ui";
 import type { Locale } from "@/lib/i18n";
@@ -51,6 +52,12 @@ export function CaseGallery({ result, locale }: { result: CaseResult; locale: Lo
           <p className="max-w-[280px] text-sm text-[#888] sm:text-right">{result.note}</p>
         </RevealItem>
 
+        {result.before && (
+          <div className="flex w-full flex-col gap-4">
+            <CaseBlocks blocks={result.before} />
+          </div>
+        )}
+
         <RevealItem className={`grid w-full gap-4 ${gridClass}`}>
           {result.flow.map((image, i) => (
             <GalleryTile
@@ -73,6 +80,12 @@ export function CaseGallery({ result, locale }: { result: CaseResult; locale: Lo
               />
             ))}
           </RevealItem>
+        )}
+
+        {result.after && (
+          <div className="flex w-full flex-col gap-4">
+            <CaseBlocks blocks={result.after} />
+          </div>
         )}
       </RevealGroup>
 

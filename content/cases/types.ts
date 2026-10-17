@@ -17,7 +17,8 @@ export type CaseStageBlock =
   | { type: "subheading"; text: string }
   | { type: "paragraph"; text: CaseParagraph }
   | { type: "image"; image: CaseImage; bordered?: boolean }
-  | { type: "stats"; items: CaseStat[] };
+  | { type: "stats"; items: CaseStat[] }
+  | { type: "list"; items: CaseParagraph[]; ordered?: boolean };
 
 export type CaseStage = {
   number: string;
@@ -35,6 +36,10 @@ export type CaseResult = {
   orientation?: "landscape" | "portrait";
   heading: string;
   note: string;
+  /** Текст перед скриншотами. */
+  before?: CaseStageBlock[];
+  /** Текст после скриншотов. */
+  after?: CaseStageBlock[];
   /** Основной флоу — несколько состояний одного экрана, показываются вместе. */
   flow: CaseImage[];
   /** Полноразмерные самостоятельные экраны. */

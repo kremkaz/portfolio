@@ -136,6 +136,31 @@ export const tanukiEn: CaseStudy = {
     ...tanuki.result!,
     heading: "Result",
     note: "Click a screenshot to see it full size",
+    before: [
+      {
+        type: "paragraph",
+        text: "Once I made the whole dish row in the cart the entry point, I ran a usability test of the whole flow with people I know (n=12). They rated **how easy it was to start the flow** at **6.6** on average, and **how easy the flow itself was** at **6.8** (SEQ scale, 1–7). The sample is small and comes from my own circle, so I treat the result as a rough signal.",
+      },
+    ],
+    after: [
+      {
+        type: "paragraph",
+        text: "**What's next?** The main open question is how the note about ingredients actually reaches the kitchen. Next steps:",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Find out from the restaurant how the kitchen sees order comments today (on the receipt, in the POS system, on a screen).",
+          "Check with the delivery POS team whether ingredient changes can be sent as a separate field rather than as text in the item name.",
+          "Split comments for the kitchen and for the courier: ingredients and allergens go to the kitchen, address and delivery details go to the courier.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Metrics: number of ingredient errors in orders, support requests about ingredients, share of orders with customized ingredients.",
+      },
+    ],
     flow: [
       alt(shots[0], "Roll card with the “Change ingredients” button"),
       alt(shots[1], "Customization screen: add-ons, ingredient swaps and an automatically removed allergen"),

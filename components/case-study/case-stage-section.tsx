@@ -33,6 +33,21 @@ export function CaseParagraph({ children }: { children: string }) {
   return <p className="text-base leading-relaxed text-[#555]">{renderRichText(children)}</p>;
 }
 
+export function CaseList({ items, ordered = false }: { items: string[]; ordered?: boolean }) {
+  const ListTag = ordered ? "ol" : "ul";
+  return (
+    <ListTag
+      className={`flex flex-col gap-2 pl-6 text-base leading-relaxed text-[#555] ${ordered ? "list-decimal" : "list-disc"}`}
+    >
+      {items.map((item) => (
+        <li key={item} className="pl-1">
+          {renderRichText(item)}
+        </li>
+      ))}
+    </ListTag>
+  );
+}
+
 export function CaseAside({ children }: { children: string }) {
   return <p className="text-base text-[#888] italic">{children}</p>;
 }
@@ -108,6 +123,7 @@ export function CaseBlocks({ blocks }: { blocks: CaseStageBlock[] }) {
         {block.type === "subheading" && <CaseSubheading>{block.text}</CaseSubheading>}
         {block.type === "image" && <CaseFigure image={block.image} bordered={block.bordered} />}
         {block.type === "stats" && <CaseStats items={block.items} />}
+        {block.type === "list" && <CaseList items={block.items} ordered={block.ordered} />}
       </RevealItem>
     );
   });
