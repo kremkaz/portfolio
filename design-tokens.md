@@ -120,3 +120,12 @@
 - **StageLabel** (нумерация "00 — Контекст и задача") — номер `text-primary/40`, тонкая линия `bg-primary/35` шириной 28px, лейбл `text-primary uppercase tracking-widest text-xs` — тот же язык, что теги кейс-карточек на главной, только без фона-плашки.
 - Кейс-страницы переиспользуют `SiteHeader`/`SiteFooter` с главной — навигация должна быть одинаковой по всему сайту.
 - Компоненты лежат в `components/case-study/*`, контент — в `content/cases/<slug>.ts` (типы в `content/cases/types.ts`) — при добавлении Tanuki/сна использовать ту же структуру.
+## Скругления — corner smoothing
+
+Все скруглённые элементы — со сглаживанием углов, как «Corner smoothing 60%» в Figma. Задаётся глобально в `app/globals.css` одной переменной:
+
+```css
+--corner-smoothing: superellipse(1.6); /* 1 — обычное скругление, 2 — squircle */
+```
+
+Круги и пилюли (`rounded-full`) остаются круглыми. Работает в Chrome/Edge (`corner-shape`); в браузерах без поддержки — обычные скругления.

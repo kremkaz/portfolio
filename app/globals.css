@@ -134,3 +134,25 @@
     @apply font-sans scroll-smooth;
   }
 }
+
+/*
+ * Corner smoothing (аналог «Corner smoothing 60%» из Figma) для всех скруглённых элементов.
+ * corner-shape работает в Chrome/Edge; в браузерах без поддержки остаются обычные скругления.
+ * Силу сглаживания меняем одной переменной: superellipse(1) — обычный круг, 2 — squircle.
+ */
+:root {
+  --corner-smoothing: superellipse(1.6);
+}
+
+@supports (corner-shape: squircle) {
+  *,
+  *::before,
+  *::after {
+    corner-shape: var(--corner-smoothing);
+  }
+
+  /* Круги и пилюли оставляем круглыми — сглаживание делает их «квадратнее». */
+  .rounded-full {
+    corner-shape: round;
+  }
+}
