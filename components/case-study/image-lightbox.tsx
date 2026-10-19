@@ -191,7 +191,8 @@ export function ZoomableImage({
 
 /**
  * Сетка одинаковых плиток в ряд (и на телефоне тоже): картинка обрезается по плитке,
- * по клику открывается целиком на весь экран — каждая сама по себе, без листания.
+ * по клику открывается целиком на весь экран, между картинками сетки можно листать
+ * стрелками и свайпом — как в «Результате».
  */
 export function ZoomableImageGrid({
   images,
@@ -200,18 +201,18 @@ export function ZoomableImageGrid({
   images: CaseImage[];
   bordered?: boolean;
 }) {
-  const [selected, setSelected] = useState<CaseImage | null>(null);
+  const [index, setIndex] = useState<number | null>(null);
   // 3 картинки — в один ряд, 2 или 4 — по две в ряд (сетка 2×2).
   const cols = images.length === 3 ? "grid-cols-3" : "grid-cols-2";
 
   return (
     <>
       <div className={`grid w-full gap-3 sm:gap-4 ${cols}`}>
-        {images.map((image) => (
+        {images.map((image, i) => (
           <button
             key={image.src}
             type="button"
-            onClick={() => setSelected(image)}
+            onClick={() => setIndex(i)}
             aria-label={image.alt}
             className={`relative aspect-[3/4] w-full cursor-zoom-in overflow-hidden rounded-xl bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] sm:rounded-2xl ${
               bordered ? "border border-[#ECECEC]" : ""
@@ -226,13 +227,7 @@ export function ZoomableImageGrid({
           </button>
         ))}
       </div>
-      <ImageLightbox
-        images={selected ? [selected] : []}
-        index={selected ? 0 : null}
-        onIndexChange={(i) => {
-          if (i === null) setSelected(null);
-        }}
-      />
+      <ImageLightbox images={images} index={index} onIndexChange={setIndex} />
     </>
   );
 }

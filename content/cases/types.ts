@@ -18,7 +18,7 @@ export type CaseStageBlock =
   | { type: "paragraph"; text: CaseParagraph }
   /** narrow — картинка по центру в узкой колонке (для высоких схем). */
   | { type: "image"; image: CaseImage; bordered?: boolean; narrow?: boolean }
-  /** Несколько одинаковых плиток в ряд, по клику каждая открывается целиком на весь экран. */
+  /** Несколько одинаковых плиток в ряд, по клику открываются на весь экран с листанием между ними. */
   | { type: "images"; images: CaseImage[]; bordered?: boolean }
   | { type: "stats"; items: CaseStat[] }
   | { type: "list"; items: CaseParagraph[]; ordered?: boolean };
