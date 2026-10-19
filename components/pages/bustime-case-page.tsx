@@ -13,8 +13,8 @@ import { caseStudies } from "@/content/cases";
 import { ui } from "@/content/ui";
 import type { Locale } from "@/lib/i18n";
 
-/** BusTime — кейс в процессе, та же структура, что у Tanuki. */
-export function BusTimeCasePage({ locale }: { locale: Locale }) {
+/** Bustime — кейс в процессе, та же структура, что у Tanuki. */
+export function BustimeCasePage({ locale }: { locale: Locale }) {
   const bustime = caseStudies.bustime[locale];
   const t = ui[locale];
   return (

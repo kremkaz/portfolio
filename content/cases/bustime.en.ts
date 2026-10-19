@@ -1,25 +1,29 @@
 import type { CaseStudy } from "./types";
 import { bustime } from "./bustime";
 
-/** English version of the BusTime skeleton — placeholders until the case is written. */
+/** English version of the Bustime skeleton — placeholders until the case is written. */
 export const bustimeEn: CaseStudy = {
   ...bustime,
   backLabel: "Back to case studies",
   backHref: "/en#cases",
-  title: "BusTime — public transport tracking",
+  title: "Bustime — public transport tracking",
   subtitle: "Tracking buses and more, anywhere in the world",
   facts: [
     { label: "Role", value: "product designer" },
     { label: "Tools", value: "in progress" },
-    { label: "Platform", value: "desktop" },
+    { label: "Platform", value: "mobile" },
   ],
-  cover: { ...bustime.cover, alt: "BusTime cover" },
+  cover: { ...bustime.cover, alt: "Bustime cover" },
   stages: [
     {
       ...bustime.stages[0],
       label: "Context & task",
-      heading: "Reworking BusTime navigation",
-      paragraphs: ["_Context goes here: what the product is, who it's for and what problem we're solving._"],
+      heading: "Reworking Bustime navigation",
+      paragraphs: [
+        "**Bustime is an app for tracking public transport in hundreds of cities worldwide**, from Nizhny Novgorod to Amsterdam. It has lots of useful features, but they're hard to find.",
+        "I've been using Bustime for over a year and only recently found out it can notify you when it's time to get off at your stop. For me it's one of the most useful features, yet it went unnoticed all that time. That worried me: if it took me a year to find it, **how many other features are users missing?**",
+        "Features nobody knows about don't do the app any good: they don't drive engagement, don't retain users and don't set the product apart from competitors. So **I set out to understand how the app's navigation works and whether the product's value could reveal itself to users faster**. This is an unofficial redesign: I didn't work with the Bustime team, but I did ask them for some data.",
+      ],
     },
     {
       ...bustime.stages[1],

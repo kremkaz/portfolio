@@ -50,8 +50,8 @@ export const cases = {
       href: "/cases/tanuki",
     },
     {
-      tags: ["B2C", "Desktop"],
-      title: "BusTime — мониторинг общественного транспорта",
+      tags: ["B2C", "Mobile"],
+      title: "Bustime — мониторинг общественного транспорта",
       subtitle: "Просмотр автобусов и не только по всему миру",
       description: "Переработка навигации + немного визуала.",
       cover: "/home/bustime-card-cover.jpg",

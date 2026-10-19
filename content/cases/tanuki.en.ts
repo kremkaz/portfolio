@@ -173,7 +173,7 @@ export const tanukiEn: CaseStudy = {
     ],
   },
   nextCase: {
-    title: "BusTime — public transport tracking",
+    title: "Bustime — public transport tracking",
     subtitle: "Tracking buses and more, anywhere in the world",
     href: "/en/cases/bustime",
   },

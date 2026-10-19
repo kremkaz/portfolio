@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BusTimeCasePage } from "@/components/pages/bustime-case-page";
+import { BustimeCasePage } from "@/components/pages/bustime-case-page";
 import { caseStudies } from "@/content/cases";
 
 const study = caseStudies.bustime.ru;
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <BusTimeCasePage locale="ru" />;
+  return <BustimeCasePage locale="ru" />;
 }

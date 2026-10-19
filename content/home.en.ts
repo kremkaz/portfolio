@@ -48,8 +48,8 @@ export const homeEn: HomeContent = {
         href: "/en/cases/tanuki",
       },
       {
-        tags: ["B2C", "Desktop"],
-        title: "BusTime — public transport tracking",
+        tags: ["B2C", "Mobile"],
+        title: "Bustime — public transport tracking",
         subtitle: "Tracking buses and more, anywhere in the world",
         description: "Reworking the navigation, plus a little visual polish.",
         cover: "/home/bustime-card-cover.jpg",

@@ -210,7 +210,7 @@ export const tanuki: CaseStudy = {
     screens: [],
   },
   nextCase: {
-    title: "BusTime — мониторинг общественного транспорта",
+    title: "Bustime — мониторинг общественного транспорта",
     subtitle: "Просмотр автобусов и не только по всему миру",
     href: "/cases/bustime",
   },
