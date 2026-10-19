@@ -48,21 +48,42 @@ export const bustimeEn: CaseStudy = {
       ...bustime.stages[2],
       label: "Navigation redesign",
       heading: "Navigation redesign",
-      paragraphs: ["_Problems with the current navigation, the new structure and wireframes go here._"],
+      paragraphs: [],
       blocks: [
+        {
+          type: "paragraph",
+          text: "I mapped the current navigation as a user flow and found **three main problems**:",
+        },
+        {
+          type: "list",
+          ordered: true,
+          items: [
+            "**Duplicate buttons** (map, settings) in different sections. They leave users unsure where to look for things, and the structure keeps growing.",
+            "**Hidden features** (notifications, transport display settings and more). Users don't know they exist and don't get their value.",
+            "**An onboarding you have to open on every screen.** That means the interface isn't clear on its own.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Next, I laid out the core features as a diagram without screens and started **regrouping them**: I wrote every section down on paper and tried different options. Most sections are standard and self-explanatory, so **a card sorting session with 30 participants** was enough to validate the grouping. Based on its results, I put together the final navigation in FigJam.",
+        },
         {
           type: "images",
           images: [
             {
-              ...bustimeImage(2, 0, 0),
+              ...bustimeImage(2, 3, 0),
               alt: "Screen map of the current Bustime app: settings, main flow and multi-select",
             },
             {
-              ...bustimeImage(2, 0, 1),
+              ...bustimeImage(2, 3, 1),
               alt: "Current Bustime information architecture: home with transport types, a bus route and a long menu",
             },
             {
-              ...bustimeImage(2, 0, 2),
+              ...bustimeImage(2, 3, 2),
+              alt: "Regrouping on paper: settings sections, profile and favorites sketched by hand",
+            },
+            {
+              ...bustimeImage(2, 3, 3),
               alt: "New information architecture: map, favorites, transport and settings with subsections",
             },
           ],

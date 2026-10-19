@@ -201,7 +201,8 @@ export function ZoomableImageGrid({
   bordered?: boolean;
 }) {
   const [selected, setSelected] = useState<CaseImage | null>(null);
-  const cols = images.length >= 3 ? "grid-cols-3" : "grid-cols-2";
+  // 3 картинки — в один ряд, 2 или 4 — по две в ряд (сетка 2×2).
+  const cols = images.length === 3 ? "grid-cols-3" : "grid-cols-2";
 
   return (
     <>
