@@ -54,7 +54,7 @@ export const cases = {
       title: "Bustime — мониторинг общественного транспорта",
       subtitle: "Просмотр автобусов и не только по всему миру",
       description: "Переработка навигации + немного визуала.",
-      cover: "/home/bustime-card-cover.jpg",
+      cover: "/home/bustime-card-cover.webp",
       year: null,
       status: "in-progress" as CaseStatus,
       href: "/cases/bustime",

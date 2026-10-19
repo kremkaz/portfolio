@@ -69,7 +69,8 @@ export function CaseCard({
 
   const content = (
     <div className="flex h-full flex-col">
-      <div className="relative h-52 w-full shrink-0 overflow-hidden bg-[#F5F5F7]">
+      {/* Фиксированные пропорции (как в Figma, ~3:2): обложка обрезается одинаково на любой ширине экрана. */}
+      <div className="relative aspect-[3/2] w-full shrink-0 overflow-hidden bg-[#F5F5F7]">
         <Image src={asset(cover)} alt="" fill className="object-cover" />
       </div>
       <div className="flex flex-1 flex-col justify-between gap-6 p-6">
