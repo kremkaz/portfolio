@@ -64,16 +64,13 @@ export function CaseCard({
   href,
 }: CaseCardProps) {
   const t = ui[locale];
-  const inProgress = status !== "published" || !href;
+  // Кейс в процессе выглядит как остальные; отличается только подписью «в процессе» вместо года.
+  const clickable = Boolean(href);
 
   const content = (
     <div className="flex h-full flex-col">
       <div className="relative h-52 w-full shrink-0 overflow-hidden bg-[#F5F5F7]">
         <Image src={asset(cover)} alt="" fill className="object-cover" />
-        {inProgress && (
-          // Кейс в разработке: обложка приглушена затемнением с лёгким блюром (как в Figma).
-          <div className="absolute inset-0 bg-black/20 backdrop-blur-[1.6px]" />
-        )}
       </div>
       <div className="flex flex-1 flex-col justify-between gap-6 p-6">
         <motion.div variants={cardBlock} className="flex flex-col gap-3">
@@ -81,18 +78,14 @@ export function CaseCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className={`rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-wide uppercase ${
-                  inProgress ? "bg-black/[0.07] text-[#C8C8C8]" : "bg-primary/[0.07] text-primary"
-                }`}
+                className="rounded-full bg-primary/[0.07] px-2.5 py-1 text-[11px] font-semibold tracking-wide text-primary uppercase"
               >
                 {tag}
               </span>
             ))}
           </div>
           <div className="flex flex-col gap-1.5">
-            <p className={`text-lg font-semibold ${inProgress ? "text-[#6D6D6D]" : "text-[#0A0A0A]"}`}>
-              {title}
-            </p>
+            <p className="text-lg font-semibold text-[#0A0A0A]">{title}</p>
             <p className="text-sm text-[#ACACAC]">{subtitle}</p>
           </div>
           <p className="text-sm leading-relaxed text-[#666]">{description}</p>
@@ -101,8 +94,10 @@ export function CaseCard({
           variants={cardBlock}
           className="flex items-center justify-between border-t border-[#F0F0F0] pt-4"
         >
-          <span className="text-xs text-[#AAA]">{year ?? t.soon}</span>
-          {!inProgress ? (
+          <span className="text-xs text-[#AAA]">
+            {status === "in-progress" ? t.inProcess : year}
+          </span>
+          {clickable ? (
             <span className="flex items-center gap-1 text-sm font-semibold text-primary transition-colors group-hover:text-primary-hover">
               {t.openCase}
               <Icon src="/home/icon-arrow-up-right.svg" className="size-[18px]" />
@@ -126,7 +121,7 @@ export function CaseCard({
     viewport: { once: true, amount: 0.2 },
   } as const;
 
-  if (!inProgress && href) {
+  if (clickable && href) {
     return (
       <MotionLink
         href={href}

@@ -45,7 +45,7 @@ export function CaseGallery({ result, locale }: { result: CaseResult; locale: Lo
         <RevealItem className="flex w-full flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div className="flex flex-col gap-3">
             <StageLabel number="04" label={t.moreScreens} />
-            <h2 className="text-3xl font-semibold tracking-tight text-[#0A0A0A] sm:text-4xl">
+            <h2 className="text-3xl font-medium tracking-tight text-[#0A0A0A] sm:text-4xl">
               {result.heading}
             </h2>
           </div>

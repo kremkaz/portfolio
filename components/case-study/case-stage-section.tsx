@@ -20,7 +20,7 @@ export function CaseStageSection({
     <RevealGroup className="flex w-full flex-col items-start gap-6">
       <RevealItem className="flex flex-col gap-4">
         <StageLabel number={number} label={label} />
-        <h2 className="text-3xl font-semibold tracking-tight text-[#0A0A0A] sm:text-4xl">
+        <h2 className="text-3xl font-medium tracking-tight text-[#0A0A0A] sm:text-4xl">
           {heading}
         </h2>
       </RevealItem>
@@ -79,7 +79,7 @@ export function CaseFigure({
 
 export function CaseSubheading({ children }: { children: string }) {
   return (
-    <h3 className="pt-4 text-2xl font-semibold tracking-tight text-[#0A0A0A] sm:text-[26px]">
+    <h3 className="pt-4 text-2xl font-medium tracking-tight text-[#0A0A0A] sm:text-[26px]">
       {children}
     </h3>
   );

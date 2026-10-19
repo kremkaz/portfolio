@@ -8,7 +8,8 @@ export function NextCaseSection({
   next,
   locale,
 }: {
-  next: { title: string; subtitle: string; href: string };
+  /** Без next — только ссылка «Вернуться к портфолио» (для кейса в процессе). */
+  next?: { title: string; subtitle: string; href: string };
   locale: Locale;
 }) {
   const t = ui[locale];
@@ -16,27 +17,34 @@ export function NextCaseSection({
   return (
     <section className="w-full border-t border-[#EBEBEB] px-6 py-16 sm:py-20">
       <RevealGroup className="mx-auto flex max-w-4xl flex-col items-center gap-10">
-        <RevealItem className="w-full">
-          <p className="text-xs font-semibold tracking-widest text-[#AAA] uppercase">
-            {t.nextCase}
-          </p>
-        </RevealItem>
-        <RevealItem className="w-full">
-          <Link
-            href={next.href}
-            className="group flex w-full items-center justify-between gap-6 rounded-2xl bg-[#F7F7F9] px-8 py-9 transition-colors hover:bg-background-section-hover"
-          >
-            <div className="flex flex-col gap-1">
-              <p className="text-2xl font-semibold tracking-tight text-[#0A0A0A] sm:text-3xl">
-                {next.title}
+        {next && (
+          <>
+            <RevealItem className="w-full">
+              <p className="text-xs font-semibold tracking-widest text-[#AAA] uppercase">
+                {t.nextCase}
               </p>
-              <p className="text-[15px] text-[#888]">{next.subtitle}</p>
-            </div>
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary transition-colors group-hover:bg-primary-hover sm:size-13">
-              <Icon src="/cases/vecta/icon-arrow-right-circle.svg" className="size-[22px] text-white" />
-            </span>
-          </Link>
-        </RevealItem>
+            </RevealItem>
+            <RevealItem className="w-full">
+              <Link
+                href={next.href}
+                className="group flex w-full items-center justify-between gap-6 rounded-2xl bg-[#F7F7F9] px-8 py-9 transition-colors hover:bg-background-section-hover"
+              >
+                <div className="flex flex-col gap-1">
+                  <p className="text-2xl font-semibold tracking-tight text-[#0A0A0A] sm:text-3xl">
+                    {next.title}
+                  </p>
+                  <p className="text-[15px] text-[#888]">{next.subtitle}</p>
+                </div>
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary transition-colors group-hover:bg-primary-hover sm:size-13">
+                  <Icon
+                    src="/cases/vecta/icon-arrow-right-circle.svg"
+                    className="size-[22px] text-white"
+                  />
+                </span>
+              </Link>
+            </RevealItem>
+          </>
+        )}
         <RevealItem>
           <Link
             href={localizePath(locale, "/#cases")}

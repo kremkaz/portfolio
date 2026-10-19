@@ -5,7 +5,8 @@ const ru = {
   viewCases: "Смотреть кейсы",
   openCase: "Открыть кейс",
   inProgress: "В разработке",
-  soon: "soon",
+  /** Вместо года у кейса, который ещё в работе. */
+  inProcess: "в процессе",
   nextCase: "Следующий кейс",
   backToPortfolio: "Вернуться к портфолио",
   moreScreens: "Больше экранов",
@@ -21,7 +22,7 @@ const en: typeof ru = {
   viewCases: "View my work",
   openCase: "View case",
   inProgress: "In progress",
-  soon: "soon",
+  inProcess: "in progress",
   nextCase: "Next case",
   backToPortfolio: "Back to portfolio",
   moreScreens: "More screens",

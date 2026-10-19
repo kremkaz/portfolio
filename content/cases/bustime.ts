@@ -1,20 +1,62 @@
-import type { Locale } from "@/lib/i18n";
+import type { CaseStudy } from "./types";
 
-/** Кейс в работе: пока есть только заглушка страницы. */
-const ru = {
+/**
+ * BusTime — кейс в процессе. Пока это заготовка структуры: этапы и заглушки
+ * на месте текста. Тексты, обложку и скриншоты заменить, когда будут готовы.
+ */
+export const bustime: CaseStudy = {
+  slug: "bustime",
+  backLabel: "Назад к кейсам",
+  backHref: "/#cases",
   title: "BusTime — мониторинг общественного транспорта",
   subtitle: "Просмотр автобусов и не только по всему миру",
-  status: "Soon",
-  backLabel: "Вернуться к портфолио",
-  backHref: "/#cases",
+  facts: [
+    { label: "Роль", value: "продуктовый дизайнер" },
+    { label: "Инструменты", value: "в процессе" },
+    { label: "Платформа", value: "desktop" },
+  ],
+  // Временная обложка — картинка с карточки на главной.
+  cover: {
+    src: "/home/bustime-card-cover.jpg",
+    alt: "Обложка кейса BusTime",
+    width: 648,
+    height: 432,
+  },
+  stages: [
+    {
+      number: "00",
+      label: "Контекст и задача",
+      heading: "Переработка навигации BusTime",
+      paragraphs: ["_Здесь будет контекст: что за продукт, для кого он и какую задачу решаем._"],
+    },
+    {
+      number: "01",
+      label: "Исследование",
+      heading: "Исследование",
+      paragraphs: ["_Здесь будут ресёрч, разбор конкурентов и выводы._"],
+    },
+    {
+      number: "02",
+      label: "Информационная архитектура",
+      heading: "Структура навигации",
+      paragraphs: ["_Здесь будут информационная архитектура и схема навигации до и после._"],
+    },
+    {
+      number: "03",
+      label: "Решение",
+      heading: "Вайрфреймы и решение",
+      paragraphs: ["_Здесь будут вайрфреймы и ключевые решения._"],
+    },
+    {
+      number: "04",
+      label: "Результат",
+      heading: "Результат",
+      paragraphs: ["_Здесь будут итоговые экраны и выводы._"],
+    },
+  ],
+  nextCase: {
+    title: "Vecta — сервис для инженеров беспилотного такси",
+    subtitle: "Мониторинг флота и обработка инцидентов",
+    href: "/cases/vecta",
+  },
 };
-
-const en: typeof ru = {
-  title: "BusTime — public transport tracking",
-  subtitle: "Tracking buses and more, anywhere in the world",
-  status: "Soon",
-  backLabel: "Back to portfolio",
-  backHref: "/en#cases",
-};
-
-export const bustime: Record<Locale, typeof ru> = { ru, en };

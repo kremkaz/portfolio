@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { BusTimeCasePage } from "@/components/pages/bustime-case-page";
-import { bustime } from "@/content/cases/bustime";
+import { caseStudies } from "@/content/cases";
+
+const study = caseStudies.bustime.ru;
 
 export const metadata: Metadata = {
-  title: bustime.ru.title,
-  description: bustime.ru.subtitle,
+  title: study.title,
+  description: study.subtitle,
 };
 
 export default function Page() {

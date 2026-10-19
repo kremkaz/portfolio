@@ -55,7 +55,7 @@ export const homeEn: HomeContent = {
         cover: "/home/bustime-card-cover.jpg",
         year: null,
         status: "in-progress" as CaseStatus,
-        href: null,
+        href: "/en/cases/bustime",
       },
     ],
   },
