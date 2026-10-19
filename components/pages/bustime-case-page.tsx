@@ -22,10 +22,9 @@ export function BustimeCasePage({ locale }: { locale: Locale }) {
       <SiteHeader />
       <CaseIntro study={bustime} />
 
-      {/* Кейс в процессе: видно начало, ниже содержимое уходит в градиент к белому с подписью. */}
-      <div className="relative w-full">
-        <main className="mx-auto flex max-h-[560px] w-full max-w-4xl flex-col items-center gap-16 overflow-hidden px-6 pt-16 pb-16 sm:gap-20 sm:pt-20 sm:pb-20">
-          {bustime.stages.map((stage) => (
+      <main className="mx-auto flex w-full max-w-4xl flex-col items-center gap-16 px-6 pt-16 pb-16 sm:gap-20 sm:pt-20 sm:pb-20">
+        {bustime.stages.map((stage, i) => {
+          const section = (
             <CaseStageSection
               key={stage.number}
               number={stage.number}
@@ -41,14 +40,26 @@ export function BustimeCasePage({ locale }: { locale: Locale }) {
               )}
               {stage.blocks && <CaseBlocks blocks={stage.blocks} />}
             </CaseStageSection>
-          ))}
-        </main>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex h-80 items-end justify-center bg-linear-to-b from-white/0 via-white via-65% to-white pb-12">
-          <span className="rounded-full bg-primary/[0.07] px-5 py-2 text-sm font-semibold tracking-wide text-primary">
-            {t.inProcess}
-          </span>
-        </div>
-      </div>
+          );
+
+          // Кейс в процессе: последний этап виден наполовину и уходит в градиент к белому.
+          if (i !== bustime.stages.length - 1) return section;
+          return (
+            <div
+              key={stage.number}
+              className="flex w-full flex-col items-center gap-6"
+            >
+              <div className="relative max-h-40 w-full overflow-hidden">
+                {section}
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/0 from-25% to-white to-90%" />
+              </div>
+              <span className="rounded-full bg-primary/[0.07] px-5 py-2 text-sm font-semibold tracking-wide text-primary">
+                {t.inProcess}
+              </span>
+            </div>
+          );
+        })}
+      </main>
 
       {bustime.result && (
         <CaseGallery result={bustime.result} locale={locale} />
