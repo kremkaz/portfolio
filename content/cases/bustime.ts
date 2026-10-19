@@ -15,13 +15,6 @@ export const bustime: CaseStudy = {
     { label: "Инструменты", value: "в процессе" },
     { label: "Платформа", value: "mobile" },
   ],
-  // Временная обложка — картинка с карточки на главной.
-  cover: {
-    src: "/home/bustime-card-cover.jpg",
-    alt: "Обложка кейса Bustime",
-    width: 648,
-    height: 432,
-  },
   stages: [
     {
       number: "00",

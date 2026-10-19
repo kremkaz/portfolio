@@ -55,7 +55,8 @@ export type CaseStudy = {
   backHref: string;
   title: string;
   subtitle: string;
-  cover: CaseImage;
+  /** Обложка под заголовком; у кейса без обложки (в процессе) блок не выводится. */
+  cover?: CaseImage;
   /** Короткие факты о проекте списком под обложкой («Роль: …», «Платформа: …»). */
   facts?: { label: string; value: string }[];
   stages: CaseStage[];

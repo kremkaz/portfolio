@@ -24,9 +24,11 @@ export function CaseIntro({ study }: { study: CaseStudy }) {
           </h1>
         </RevealItem>
 
-        <RevealItem className="w-full">
-          <CaseFigure image={study.cover} bordered={false} />
-        </RevealItem>
+        {study.cover && (
+          <RevealItem className="w-full">
+            <CaseFigure image={study.cover} bordered={false} />
+          </RevealItem>
+        )}
 
         {study.facts && (
           <RevealItem>

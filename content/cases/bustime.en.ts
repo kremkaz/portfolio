@@ -22,7 +22,6 @@ export const bustimeEn: CaseStudy = {
     { label: "Tools", value: "in progress" },
     { label: "Platform", value: "mobile" },
   ],
-  cover: { ...bustime.cover, alt: "Bustime cover" },
   stages: [
     {
       ...bustime.stages[0],
