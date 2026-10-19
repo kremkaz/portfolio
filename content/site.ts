@@ -13,8 +13,8 @@ export const siteOrigin = "https://kremkaz.github.io";
  */
 export const profilePhoto = {
   src: "/home/evgenia-artyushina-studio.jpg",
-  width: 900,
-  height: 1200,
+  width: 699,
+  height: 933,
 };
 
 /**
