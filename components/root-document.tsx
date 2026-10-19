@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { asset } from "@/lib/asset";
-import { profilePhoto, profilePhotoUrl } from "@/content/site";
+import { profileIcon, profileIconUrl } from "@/content/site";
 import type { Locale } from "@/lib/i18n";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-sans" });
@@ -11,16 +11,16 @@ const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-sans" })
 /** Общие метаданные обеих языковых версий: значок вкладки и превью ссылки (см. content/site.ts). */
 export const sharedMetadata: Metadata = {
   icons: {
-    icon: asset(profilePhoto.src),
-    apple: asset(profilePhoto.src),
+    icon: asset(profileIcon.src),
+    apple: asset(profileIcon.src),
   },
   openGraph: {
     type: "website",
-    images: [{ url: profilePhotoUrl, width: profilePhoto.width, height: profilePhoto.height }],
+    images: [{ url: profileIconUrl, width: profileIcon.width, height: profileIcon.height }],
   },
   twitter: {
     card: "summary",
-    images: [profilePhotoUrl],
+    images: [profileIconUrl],
   },
 };
 

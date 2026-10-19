@@ -17,5 +17,16 @@ export const profilePhoto = {
   height: 1200,
 };
 
-/** Абсолютная ссылка на фото — для превью ссылок (мессенджерам нужен полный адрес). */
-export const profilePhotoUrl = `${siteOrigin}${asset(profilePhoto.src)}`;
+/**
+ * Квадратный кадр по лицу из того же фото — для маленьких иконок: значок вкладки,
+ * иконка на iPhone и превью ссылки в мессенджерах (там картинка маленькая).
+ * При замене фото вырезать новый квадрат и поменять src здесь.
+ */
+export const profileIcon = {
+  src: "/home/evgenia-artyushina-face.jpg",
+  width: 580,
+  height: 580,
+};
+
+/** Абсолютная ссылка на иконку — для превью ссылок (мессенджерам нужен полный адрес). */
+export const profileIconUrl = `${siteOrigin}${asset(profileIcon.src)}`;
