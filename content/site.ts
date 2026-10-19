@@ -12,9 +12,9 @@ export const siteOrigin = "https://kremkaz.github.io";
  * старую картинку из кэша.
  */
 export const profilePhoto = {
-  src: "/home/evgenia-artyushina.jpg",
-  width: 640,
-  height: 640,
+  src: "/home/evgenia-artyushina-studio.jpg",
+  width: 900,
+  height: 1200,
 };
 
 /** Абсолютная ссылка на фото — для превью ссылок (мессенджерам нужен полный адрес). */

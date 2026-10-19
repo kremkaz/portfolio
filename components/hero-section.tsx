@@ -49,7 +49,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
         <Image
           src={asset(hero.photo)}
           alt={hero.name}
-          className="size-full object-cover"
+          className="size-full object-cover object-top"
           width={330}
           height={440}
           priority
