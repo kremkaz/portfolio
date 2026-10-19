@@ -96,11 +96,11 @@ export function CaseCard({
           className="flex items-center justify-between border-t border-[#F0F0F0] pt-4"
         >
           <span className="text-xs text-[#AAA]">
-            {status === "in-progress" ? t.inProcess : year}
+            {status === "in-progress" ? t.soon : year}
           </span>
           {clickable ? (
             <span className="flex items-center gap-1 text-sm font-semibold text-primary transition-colors group-hover:text-primary-hover">
-              {t.openCase}
+              {status === "in-progress" ? t.openProcess : t.openCase}
               <Icon src="/home/icon-arrow-up-right.svg" className="size-[18px]" />
             </span>
           ) : (

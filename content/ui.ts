@@ -4,6 +4,10 @@ import type { Locale } from "@/lib/i18n";
 const ru = {
   viewCases: "Смотреть кейсы",
   openCase: "Открыть кейс",
+  /** Ссылка на карточке кейса в процессе — вместо «Открыть кейс». */
+  openProcess: "Процесс",
+  /** Вместо года на карточке кейса в процессе. */
+  soon: "soon",
   inProgress: "В разработке",
   /** Вместо года у кейса, который ещё в работе. */
   inProcess: "в процессе",
@@ -21,6 +25,8 @@ const ru = {
 const en: typeof ru = {
   viewCases: "View my work",
   openCase: "View case",
+  openProcess: "Process",
+  soon: "soon",
   inProgress: "In progress",
   inProcess: "in progress",
   nextCase: "Next case",
