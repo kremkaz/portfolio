@@ -188,3 +188,50 @@ export function ZoomableImage({
     </>
   );
 }
+
+/**
+ * Сетка одинаковых плиток в ряд (и на телефоне тоже): картинка обрезается по плитке,
+ * по клику открывается целиком на весь экран — каждая сама по себе, без листания.
+ */
+export function ZoomableImageGrid({
+  images,
+  bordered = true,
+}: {
+  images: CaseImage[];
+  bordered?: boolean;
+}) {
+  const [selected, setSelected] = useState<CaseImage | null>(null);
+  const cols = images.length >= 3 ? "grid-cols-3" : "grid-cols-2";
+
+  return (
+    <>
+      <div className={`grid w-full gap-3 sm:gap-4 ${cols}`}>
+        {images.map((image) => (
+          <button
+            key={image.src}
+            type="button"
+            onClick={() => setSelected(image)}
+            aria-label={image.alt}
+            className={`relative aspect-[3/4] w-full cursor-zoom-in overflow-hidden rounded-xl bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] sm:rounded-2xl ${
+              bordered ? "border border-[#ECECEC]" : ""
+            }`}
+          >
+            <Image
+              src={asset(image.src)}
+              alt={image.alt}
+              fill
+              className="object-cover object-top"
+            />
+          </button>
+        ))}
+      </div>
+      <ImageLightbox
+        images={selected ? [selected] : []}
+        index={selected ? 0 : null}
+        onIndexChange={(i) => {
+          if (i === null) setSelected(null);
+        }}
+      />
+    </>
+  );
+}

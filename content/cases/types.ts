@@ -16,7 +16,10 @@ export type CaseStat = {
 export type CaseStageBlock =
   | { type: "subheading"; text: string }
   | { type: "paragraph"; text: CaseParagraph }
-  | { type: "image"; image: CaseImage; bordered?: boolean }
+  /** narrow — картинка по центру в узкой колонке (для высоких схем). */
+  | { type: "image"; image: CaseImage; bordered?: boolean; narrow?: boolean }
+  /** Несколько одинаковых плиток в ряд, по клику каждая открывается целиком на весь экран. */
+  | { type: "images"; images: CaseImage[]; bordered?: boolean }
   | { type: "stats"; items: CaseStat[] }
   | { type: "list"; items: CaseParagraph[]; ordered?: boolean };
 

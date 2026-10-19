@@ -1,5 +1,14 @@
 import type { CaseStudy } from "./types";
 import { bustime } from "./bustime";
+import type { CaseImage } from "./types";
+
+/** Картинка из русской версии: этап → блок → (для блока «images») номер картинки. */
+function bustimeImage(stage: number, block: number, image = 0): CaseImage {
+  const b = bustime.stages[stage].blocks![block];
+  if (b.type === "image") return b.image;
+  if (b.type === "images") return b.images[image];
+  throw new Error("not an image block");
+}
 
 /** English version of the Bustime skeleton — placeholders until the case is written. */
 export const bustimeEn: CaseStudy = {
@@ -18,7 +27,7 @@ export const bustimeEn: CaseStudy = {
     {
       ...bustime.stages[0],
       label: "Context & task",
-      heading: "Reworking Bustime navigation",
+      heading: "Keeping track of buses, made easy",
       paragraphs: [
         "**Bustime is an app for tracking public transport in hundreds of cities worldwide**, from Nizhny Novgorod to Amsterdam. It has lots of useful features, but they're hard to find.",
         "I've been using Bustime for over a year and only recently found out it can notify you when it's time to get off at your stop. For me it's one of the most useful features, yet it went unnoticed all that time. That worried me: if it took me a year to find it, **how many other features are users missing?**",
@@ -41,6 +50,25 @@ export const bustimeEn: CaseStudy = {
       label: "Navigation redesign",
       heading: "Navigation redesign",
       paragraphs: ["_Problems with the current navigation, the new structure and wireframes go here._"],
+      blocks: [
+        {
+          type: "images",
+          images: [
+            {
+              ...bustimeImage(2, 0, 0),
+              alt: "Screen map of the current Bustime app: settings, main flow and multi-select",
+            },
+            {
+              ...bustimeImage(2, 0, 1),
+              alt: "Current Bustime information architecture: home with transport types, a bus route and a long menu",
+            },
+            {
+              ...bustimeImage(2, 0, 2),
+              alt: "New information architecture: map, favorites, transport and settings with subsections",
+            },
+          ],
+        },
+      ],
     },
     {
       ...bustime.stages[3],

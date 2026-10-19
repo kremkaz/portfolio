@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { StageLabel } from "@/components/case-study/stage-label";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { renderRichText } from "@/lib/rich-text";
-import { ZoomableImage } from "@/components/case-study/image-lightbox";
+import { ZoomableImage, ZoomableImageGrid } from "@/components/case-study/image-lightbox";
 import type { CaseImage, CaseStageBlock, CaseStat } from "@/content/cases/types";
 
 export function CaseStageSection({
@@ -121,7 +121,16 @@ export function CaseBlocks({ blocks }: { blocks: CaseStageBlock[] }) {
             (p, j) => p.type === "paragraph" && <CaseParagraph key={j}>{p.text}</CaseParagraph>,
           )}
         {block.type === "subheading" && <CaseSubheading>{block.text}</CaseSubheading>}
-        {block.type === "image" && <CaseFigure image={block.image} bordered={block.bordered} />}
+        {block.type === "image" && (
+          <CaseFigure
+            image={block.image}
+            bordered={block.bordered}
+            className={block.narrow ? "mx-auto w-full max-w-md" : ""}
+          />
+        )}
+        {block.type === "images" && (
+          <ZoomableImageGrid images={block.images} bordered={block.bordered} />
+        )}
         {block.type === "stats" && <CaseStats items={block.items} />}
         {block.type === "list" && <CaseList items={block.items} ordered={block.ordered} />}
       </RevealItem>
