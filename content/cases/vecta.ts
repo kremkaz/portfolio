@@ -3,7 +3,7 @@ import type { CaseStudy } from "./types";
 export const vecta: CaseStudy = {
   slug: "vecta",
   backLabel: "Назад к кейсам",
-  backHref: "/",
+  backHref: "/#cases",
   title: "Vecta — сервис для инженеров беспилотного такси",
   subtitle: "Мониторинг флота и обработка инцидентов",
   facts: [
@@ -12,8 +12,8 @@ export const vecta: CaseStudy = {
     { label: "Платформа", value: "desktop" },
   ],
   cover: {
-    src: "/cases/vecta/vecta-cover.webp",
-    alt: "Обложка кейса Vecta: дашборд мониторинга флота, карточка инцидента и мокап беспилотного автомобиля",
+    src: "/cases/vecta/vecta-cover-dashboards.webp",
+    alt: "Обложка кейса Vecta: карточка автомобиля, дашборд инцидентов, окно инцидента от оператора и карточка инцидента поверх карты",
     width: 2000,
     height: 853,
   },

@@ -47,13 +47,14 @@ const cardBlock: Variants = {
     y: 0,
     filter: "blur(0px)",
     transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    transitionEnd: { filter: "none" },
   },
 };
 
 const staticCardContainer: Variants = { hidden: {}, show: {} };
 const staticCardBlock: Variants = {
   hidden: cardBlock.hidden,
-  show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0 } },
+  show: { opacity: 1, y: 0, filter: "none", transition: { duration: 0 } },
 };
 
 const MotionLink = motion.create(Link);

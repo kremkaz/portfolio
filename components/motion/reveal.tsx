@@ -18,6 +18,9 @@ const item: Variants = {
     y: 0,
     filter: "blur(0px)",
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    // После анимации фильтр снимаем совсем: с filter: blur(0px) браузеры (особенно Safari)
+    // рисуют блок отдельным слоем и могут «мылить» картинки внутри.
+    transitionEnd: { filter: "none" },
   },
 };
 
@@ -25,7 +28,7 @@ const item: Variants = {
 const staticContainer: Variants = { hidden: {}, show: {} };
 const staticItem: Variants = {
   hidden: item.hidden,
-  show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0 } },
+  show: { opacity: 1, y: 0, filter: "none", transition: { duration: 0 } },
 };
 
 const RevealAnimateContext = createContext(true);

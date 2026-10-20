@@ -37,30 +37,3 @@ export function useAnimateReveal() {
   const [animate] = useState(() => !hasRevealed());
   return animate;
 }
-
-/**
- * История переходов внутри сайта — для кнопки «Назад»: она ведёт на предыдущую
- * страницу и сразу наверх. Пусто — на сайт зашли по прямой ссылке.
- */
-const pathHistory: string[] = [];
-let goingBack = false;
-
-/** Вызывается при каждой смене страницы. */
-export function trackPath(path: string) {
-  if (goingBack) {
-    goingBack = false;
-    pathHistory.pop();
-    if (pathHistory.at(-1) !== path) pathHistory.push(path);
-    return;
-  }
-  if (pathHistory.at(-1) !== path) pathHistory.push(path);
-}
-
-/** Следующий переход — возврат назад (кнопкой «Назад» на сайте или в браузере). */
-export function markGoingBack() {
-  goingBack = true;
-}
-
-export function getBackTarget() {
-  return pathHistory.length > 1 ? pathHistory[pathHistory.length - 2] : null;
-}

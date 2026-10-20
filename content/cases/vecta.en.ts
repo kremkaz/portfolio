@@ -9,7 +9,7 @@ const [context, research, hypothesis, wireframes] = vecta.stages;
 export const vectaEn: CaseStudy = {
   ...vecta,
   backLabel: "Back to case studies",
-  backHref: "/en",
+  backHref: "/en#cases",
   title: "Vecta — a service for robotaxi engineers",
   facts: [
     { label: "Role", value: "UI/UX designer" },
@@ -19,7 +19,7 @@ export const vectaEn: CaseStudy = {
   subtitle: "Fleet monitoring and incident management",
   cover: alt(
     vecta.cover,
-    "Vecta cover: fleet monitoring dashboard, incident card and a robotaxi mockup",
+    "Vecta cover: vehicle card, incidents dashboard, an operator-reported incident and an incident card over a map",
   ),
   stages: [
     {
