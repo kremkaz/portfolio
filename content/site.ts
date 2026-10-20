@@ -12,8 +12,8 @@ export const siteOrigin = "https://kremkaz.github.io";
  * старую картинку из кэша.
  */
 export const profilePhoto = {
-  src: "/home/evgenia-artyushina-studio.jpg",
-  width: 699,
+  src: "/home/evgenia-artyushina-portrait.jpg",
+  width: 700,
   height: 933,
 };
 
@@ -23,7 +23,7 @@ export const profilePhoto = {
  * При замене фото вырезать новый квадрат и поменять src здесь.
  */
 export const profileIcon = {
-  src: "/home/evgenia-artyushina-face.jpg",
+  src: "/home/evgenia-artyushina-portrait-face.jpg",
   width: 580,
   height: 580,
 };
