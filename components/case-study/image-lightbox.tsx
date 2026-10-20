@@ -1,7 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
@@ -156,7 +164,50 @@ export function ImageLightbox({
   );
 }
 
-/** Картинка-кнопка: по клику открывается на весь экран. */
+type LightboxGroupApi = {
+  register: (image: CaseImage) => () => void;
+  open: (image: CaseImage) => void;
+};
+
+const LightboxGroupContext = createContext<LightboxGroupApi | null>(null);
+
+/**
+ * Общий просмотр для всех картинок внутри (например, одного этапа кейса):
+ * по клику любая открывается на весь экран, между ними листаются стрелки и свайп.
+ * Если картинка одна — стрелок нет.
+ */
+export function LightboxGroup({ children }: { children: ReactNode }) {
+  const registered = useRef<CaseImage[]>([]);
+  const [images, setImages] = useState<CaseImage[]>([]);
+  const [index, setIndex] = useState<number | null>(null);
+
+  const api = useMemo<LightboxGroupApi>(
+    () => ({
+      register(image) {
+        if (!registered.current.some((i) => i.src === image.src)) registered.current.push(image);
+        return () => {
+          registered.current = registered.current.filter((i) => i.src !== image.src);
+        };
+      },
+      open(image) {
+        // Порядок — как картинки идут на странице.
+        const list = [...registered.current];
+        setImages(list);
+        setIndex(Math.max(0, list.findIndex((i) => i.src === image.src)));
+      },
+    }),
+    [],
+  );
+
+  return (
+    <LightboxGroupContext.Provider value={api}>
+      {children}
+      <ImageLightbox images={images} index={index} onIndexChange={setIndex} />
+    </LightboxGroupContext.Provider>
+  );
+}
+
+/** Картинка-кнопка: по клику открывается на весь экран (внутри LightboxGroup — с листанием). */
 export function ZoomableImage({
   image,
   className,
@@ -167,12 +218,15 @@ export function ZoomableImage({
   imageClassName?: string;
 }) {
   const [index, setIndex] = useState<number | null>(null);
+  const group = useContext(LightboxGroupContext);
+
+  useEffect(() => group?.register(image), [group, image]);
 
   return (
     <>
       <button
         type="button"
-        onClick={() => setIndex(0)}
+        onClick={() => (group ? group.open(image) : setIndex(0))}
         aria-label={image.alt}
         className={`block w-full cursor-zoom-in ${className ?? ""}`}
       >
@@ -184,7 +238,7 @@ export function ZoomableImage({
           className={imageClassName}
         />
       </button>
-      <ImageLightbox images={[image]} index={index} onIndexChange={setIndex} />
+      {!group && <ImageLightbox images={[image]} index={index} onIndexChange={setIndex} />}
     </>
   );
 }

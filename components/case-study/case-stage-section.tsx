@@ -2,7 +2,11 @@ import type { ReactNode } from "react";
 import { StageLabel } from "@/components/case-study/stage-label";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { renderRichText } from "@/lib/rich-text";
-import { ZoomableImage, ZoomableImageGrid } from "@/components/case-study/image-lightbox";
+import {
+  LightboxGroup,
+  ZoomableImage,
+  ZoomableImageGrid,
+} from "@/components/case-study/image-lightbox";
 import type { CaseImage, CaseStageBlock, CaseStat } from "@/content/cases/types";
 
 export function CaseStageSection({
@@ -24,7 +28,8 @@ export function CaseStageSection({
           {heading}
         </h2>
       </RevealItem>
-      {children}
+      {/* Все фото этапа открываются в общем просмотре — листаются стрелками и свайпом. */}
+      <LightboxGroup>{children}</LightboxGroup>
     </RevealGroup>
   );
 }
