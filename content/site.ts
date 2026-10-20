@@ -18,8 +18,8 @@ export const profilePhoto = {
 };
 
 /**
- * Квадратный кадр по лицу из того же фото — для маленьких иконок: значок вкладки,
- * иконка на iPhone и превью ссылки в мессенджерах (там картинка маленькая).
+ * Квадратный кадр по лицу из того же фото — для маленьких иконок: значок вкладки
+ * и иконка на iPhone.
  * При замене фото вырезать новый квадрат и поменять src здесь.
  */
 export const profileIcon = {
@@ -28,5 +28,15 @@ export const profileIcon = {
   height: 580,
 };
 
-/** Абсолютная ссылка на иконку — для превью ссылок (мессенджерам нужен полный адрес). */
-export const profileIconUrl = `${siteOrigin}${asset(profileIcon.src)}`;
+/**
+ * Превью ссылки в мессенджерах — то же фото, что на главной, но крупнее (900×1200):
+ * большую картинку Telegram показывает крупно, а квадрат по лицу — маленькой миниатюрой.
+ * При замене фото обновить и этот файл.
+ */
+export const profilePreview = {
+  src: "/home/evgenia-artyushina-portrait-preview.jpg",
+  width: 900,
+  height: 1200,
+};
+
+export const profilePreviewUrl = `${siteOrigin}${asset(profilePreview.src)}`;

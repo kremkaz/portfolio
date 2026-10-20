@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { asset } from "@/lib/asset";
-import { profileIcon, profileIconUrl } from "@/content/site";
+import { profileIcon, profilePreview, profilePreviewUrl } from "@/content/site";
 import type { Locale } from "@/lib/i18n";
 import { RouteEffects } from "@/components/route-effects";
 
@@ -17,11 +17,11 @@ export const sharedMetadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    images: [{ url: profileIconUrl, width: profileIcon.width, height: profileIcon.height }],
+    images: [{ url: profilePreviewUrl, width: profilePreview.width, height: profilePreview.height }],
   },
   twitter: {
-    card: "summary",
-    images: [profileIconUrl],
+    card: "summary_large_image",
+    images: [profilePreviewUrl],
   },
 };
 
