@@ -29,14 +29,14 @@ export const profileIcon = {
 };
 
 /**
- * Превью ссылки в мессенджерах — то же фото, что на главной, но крупнее (900×1200):
- * большую картинку Telegram показывает крупно, а квадрат по лицу — маленькой миниатюрой.
- * При замене фото обновить и этот файл.
+ * Превью ссылки в мессенджерах — небольшой квадрат 480×480: Telegram показывает его
+ * маленькой миниатюрой справа. Внутри — фото целиком, как на главной, по бокам — его же
+ * размытый фон. При замене фото пересобрать этот файл.
  */
 export const profilePreview = {
   src: "/home/evgenia-artyushina-portrait-preview.jpg",
-  width: 900,
-  height: 1200,
+  width: 480,
+  height: 480,
 };
 
 export const profilePreviewUrl = `${siteOrigin}${asset(profilePreview.src)}`;

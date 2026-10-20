@@ -20,7 +20,7 @@ export const sharedMetadata: Metadata = {
     images: [{ url: profilePreviewUrl, width: profilePreview.width, height: profilePreview.height }],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     images: [profilePreviewUrl],
   },
 };
