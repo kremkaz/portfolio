@@ -23,7 +23,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
             <h1 className="text-4xl font-semibold tracking-tight text-[#111212] sm:text-5xl">
               {hero.name}
             </h1>
-            <p className="text-base font-medium text-primary/70 sm:text-lg">{hero.role}</p>
+            <p className="text-base font-medium text-primary sm:text-lg">{hero.role}</p>
           </div>
         </RevealItem>
         <RevealItem className="flex max-w-prose flex-col gap-3">

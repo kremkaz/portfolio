@@ -51,7 +51,12 @@ const cardBlock: Variants = {
   },
 };
 
-const staticCardContainer: Variants = { hidden: {}, show: {} };
+// Начальное состояние — как у анимированной версии (иначе разметка сервера и браузера
+// разойдётся при перезагрузке), но показ мгновенный.
+const staticCardContainer: Variants = {
+  hidden: cardContainer.hidden,
+  show: { opacity: 1, y: 0, transition: { duration: 0 } },
+};
 const staticCardBlock: Variants = {
   hidden: cardBlock.hidden,
   show: { opacity: 1, y: 0, filter: "none", transition: { duration: 0 } },
@@ -122,7 +127,7 @@ export function CaseCard({
   );
 
   const className =
-    "flex w-full flex-col overflow-hidden rounded-2xl border border-[#E8E8EC] bg-white hover:shadow-[0_12px_32px_-16px_rgba(0,81,112,0.25)]";
+    "flex w-full flex-col overflow-hidden rounded-2xl border border-[#E8E8EC] bg-white hover:shadow-[0_12px_32px_-16px_rgba(0,56,112,0.25)]";
 
   // Появление — только при первом заходе на сайт, дальше карточки сразу на месте.
   const reveal = animateReveal

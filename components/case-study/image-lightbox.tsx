@@ -268,7 +268,7 @@ export function ZoomableImageGrid({
             type="button"
             onClick={() => setIndex(i)}
             aria-label={image.alt}
-            className={`relative aspect-[3/4] w-full cursor-zoom-in overflow-hidden rounded-xl bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] sm:rounded-2xl ${
+            className={`relative aspect-[3/4] w-full cursor-zoom-in overflow-hidden rounded-2xl bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] ${
               bordered ? "border border-[#ECECEC]" : ""
             }`}
           >
