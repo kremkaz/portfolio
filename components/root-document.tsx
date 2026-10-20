@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { asset } from "@/lib/asset";
 import { profileIcon, profileIconUrl } from "@/content/site";
 import type { Locale } from "@/lib/i18n";
+import { RouteEffects } from "@/components/route-effects";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-sans" });
 
@@ -31,8 +32,17 @@ export const sharedMetadata: Metadata = {
  */
 export function RootDocument({ lang, children }: { lang: Locale; children: ReactNode }) {
   return (
-    <html lang={lang} className={cn("h-full", "antialiased", "font-sans", inter.variable)}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    // data-scroll-behavior: при переходах между страницами Next.js отключает плавную
+    // прокрутку, чтобы страница открывалась сразу наверху, без «проезда».
+    <html
+      lang={lang}
+      data-scroll-behavior="smooth"
+      className={cn("h-full", "antialiased", "font-sans", inter.variable)}
+    >
+      <body className="min-h-full flex flex-col">
+        <RouteEffects />
+        {children}
+      </body>
     </html>
   );
 }

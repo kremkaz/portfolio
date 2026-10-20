@@ -16,6 +16,7 @@ import {
 import { useActiveSection } from "@/lib/use-active-section";
 import { EmailLink } from "@/components/email-link";
 import { Icon } from "@/components/icon";
+import { useAnimateReveal } from "@/lib/first-visit";
 
 /**
  * Где стоит кнопка языка: "separate" — отдельным кружком справа от шапки,
@@ -57,6 +58,8 @@ export function SiteHeader() {
     document.documentElement.lang = locale;
   }, [locale]);
 
+  const animateReveal = useAnimateReveal();
+
   function switchLanguage() {
     // Та же страница на другом языке; якорь (#cases и т.п.) сохраняем.
     const target =
@@ -68,7 +71,8 @@ export function SiteHeader() {
     <motion.div
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      // После первого захода шапка появляется сразу, без анимации.
+      transition={animateReveal ? { duration: 0.4, ease: "easeOut" } : { duration: 0 }}
       className="sticky top-4 z-50 mx-auto flex w-[calc(100%-2rem)] max-w-[1142px] items-center gap-2 sm:top-6 sm:gap-3"
     >
       <header className="flex min-w-0 flex-1 items-center justify-between gap-3 rounded-full border border-black/[0.04] bg-white/80 p-2 shadow-[0_8px_30px_-12px_rgba(0,81,112,0.15)] backdrop-blur-md">

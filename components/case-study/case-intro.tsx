@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { BackLink } from "@/components/back-link";
 import type { CaseStudy } from "@/content/cases/types";
 import { Icon } from "@/components/icon";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
@@ -12,13 +12,13 @@ export function CaseIntro({ study }: { study: CaseStudy }) {
     <section className="w-full px-6 pt-6 sm:pt-8">
       <RevealGroup className="mx-auto flex w-full max-w-4xl flex-col items-start gap-8 sm:gap-10">
         <RevealItem className="flex flex-col items-start gap-6">
-          <Link
-            href={study.backHref}
+          <BackLink
+            fallbackHref={study.backHref}
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#666] hover:text-primary"
           >
             <Icon src="/cases/vecta/icon-arrow-left.svg" className="size-4" />
             {study.backLabel}
-          </Link>
+          </BackLink>
           <h1 className="max-w-3xl text-3xl leading-tight font-medium tracking-tight text-[#0A0A0A] sm:text-5xl">
             {study.title}
           </h1>

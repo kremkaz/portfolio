@@ -47,7 +47,7 @@ export function NextCaseSection({
         )}
         <RevealItem>
           <Link
-            href={localizePath(locale, "/#cases")}
+            href={localizePath(locale, "/")}
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#666] hover:text-primary"
           >
             <Icon src="/cases/vecta/icon-arrow-left.svg" className="size-4" />

@@ -8,6 +8,7 @@ import { ui } from "@/content/ui";
 import type { Locale } from "@/lib/i18n";
 import { asset } from "@/lib/asset";
 import { Icon } from "@/components/icon";
+import { useAnimateReveal } from "@/lib/first-visit";
 
 export type CaseCardProps = {
   index: number;
@@ -49,6 +50,12 @@ const cardBlock: Variants = {
   },
 };
 
+const staticCardContainer: Variants = { hidden: {}, show: {} };
+const staticCardBlock: Variants = {
+  hidden: cardBlock.hidden,
+  show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0 } },
+};
+
 const MotionLink = motion.create(Link);
 
 export function CaseCard({
@@ -64,6 +71,8 @@ export function CaseCard({
   href,
 }: CaseCardProps) {
   const t = ui[locale];
+  const animateReveal = useAnimateReveal();
+  const block = animateReveal ? cardBlock : staticCardBlock;
   // Кейс в процессе выглядит как остальные; отличается только подписью «в процессе» вместо года.
   const clickable = Boolean(href);
 
@@ -74,7 +83,7 @@ export function CaseCard({
         <Image src={asset(cover)} alt="" fill className="object-cover" />
       </div>
       <div className="flex flex-1 flex-col justify-between gap-6 p-6">
-        <motion.div variants={cardBlock} className="flex flex-col gap-3">
+        <motion.div variants={block} className="flex flex-col gap-3">
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <span
@@ -92,7 +101,7 @@ export function CaseCard({
           <p className="text-sm leading-relaxed text-[#666]">{description}</p>
         </motion.div>
         <motion.div
-          variants={cardBlock}
+          variants={block}
           className="flex items-center justify-between border-t border-[#F0F0F0] pt-4"
         >
           <span className="text-xs text-[#AAA]">
@@ -114,13 +123,16 @@ export function CaseCard({
   const className =
     "flex w-full flex-col overflow-hidden rounded-2xl border border-[#E8E8EC] bg-white hover:shadow-[0_12px_32px_-16px_rgba(0,81,112,0.25)]";
 
-  const reveal = {
-    custom: index,
-    variants: cardContainer,
-    initial: "hidden",
-    whileInView: "show",
-    viewport: { once: true, amount: 0.2 },
-  } as const;
+  // Появление — только при первом заходе на сайт, дальше карточки сразу на месте.
+  const reveal = animateReveal
+    ? ({
+        custom: index,
+        variants: cardContainer,
+        initial: "hidden",
+        whileInView: "show",
+        viewport: { once: true, amount: 0.2 },
+      } as const)
+    : ({ custom: index, variants: staticCardContainer, initial: "hidden", animate: "show" } as const);
 
   if (clickable && href) {
     return (

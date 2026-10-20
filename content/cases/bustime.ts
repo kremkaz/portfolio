@@ -7,7 +7,7 @@ import type { CaseStudy } from "./types";
 export const bustime: CaseStudy = {
   slug: "bustime",
   backLabel: "Назад к кейсам",
-  backHref: "/#cases",
+  backHref: "/",
   title: "Bustime — мониторинг общественного транспорта",
   subtitle: "Просмотр автобусов и не только по всему миру",
   facts: [

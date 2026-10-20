@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, type Variants } from "motion/react";
-import type { ComponentProps } from "react";
+import { createContext, useContext, type ComponentProps } from "react";
+import { useAnimateReveal } from "@/lib/first-visit";
 
 const container: Variants = {
   hidden: {},
@@ -20,23 +21,42 @@ const item: Variants = {
   },
 };
 
+/** Без анимации: после первого захода на сайт контент сразу стоит на месте. */
+const staticContainer: Variants = { hidden: {}, show: {} };
+const staticItem: Variants = {
+  hidden: item.hidden,
+  show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0 } },
+};
+
+const RevealAnimateContext = createContext(true);
+
 type RevealGroupProps = ComponentProps<typeof motion.div> & { as?: "div" | "section" };
 
-/** Скролл-reveal контейнер: дети проявляются по очереди — как бы постепенно из белого (opacity+blur+translateY), см. animations.md #1. */
+/**
+ * Скролл-reveal контейнер: дети проявляются по очереди — как бы постепенно из белого
+ * (opacity+blur+translateY), см. animations.md #1. Только при первом заходе на сайт.
+ */
 export function RevealGroup({ as = "div", className, ...props }: RevealGroupProps) {
   const MotionTag = as === "section" ? motion.section : motion.div;
+  const animate = useAnimateReveal();
+  const revealProps = animate
+    ? ({ whileInView: "show", viewport: { once: true, amount: 0.2 } } as const)
+    : ({ animate: "show" } as const);
+
   return (
-    <MotionTag
-      className={className}
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
-      {...props}
-    />
+    <RevealAnimateContext.Provider value={animate}>
+      <MotionTag
+        className={className}
+        variants={animate ? container : staticContainer}
+        initial="hidden"
+        {...revealProps}
+        {...props}
+      />
+    </RevealAnimateContext.Provider>
   );
 }
 
 export function RevealItem({ className, ...props }: ComponentProps<typeof motion.div>) {
-  return <motion.div className={className} variants={item} {...props} />;
+  const animate = useContext(RevealAnimateContext);
+  return <motion.div className={className} variants={animate ? item : staticItem} {...props} />;
 }

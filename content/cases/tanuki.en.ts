@@ -18,7 +18,7 @@ const shots = tanuki.result!.flow;
 export const tanukiEn: CaseStudy = {
   ...tanuki,
   backLabel: "Back to case studies",
-  backHref: "/en#cases",
+  backHref: "/en",
   title: "Tanuki — customizing a dish",
   subtitle: "Ingredient customization for food delivery",
   facts: [

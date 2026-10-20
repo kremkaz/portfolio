@@ -3,7 +3,7 @@ import type { CaseStudy } from "./types";
 export const tanuki: CaseStudy = {
   slug: "tanuki",
   backLabel: "Назад к кейсам",
-  backHref: "/#cases",
+  backHref: "/",
   title: "Tanuki — изменение состава блюда",
   subtitle: "Кастомизация ингредиентов в доставке еды",
   facts: [

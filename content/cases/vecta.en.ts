@@ -9,7 +9,7 @@ const [context, research, hypothesis, wireframes] = vecta.stages;
 export const vectaEn: CaseStudy = {
   ...vecta,
   backLabel: "Back to case studies",
-  backHref: "/en#cases",
+  backHref: "/en",
   title: "Vecta — a service for robotaxi engineers",
   facts: [
     { label: "Role", value: "UI/UX designer" },

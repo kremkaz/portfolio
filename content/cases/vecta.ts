@@ -3,7 +3,7 @@ import type { CaseStudy } from "./types";
 export const vecta: CaseStudy = {
   slug: "vecta",
   backLabel: "Назад к кейсам",
-  backHref: "/#cases",
+  backHref: "/",
   title: "Vecta — сервис для инженеров беспилотного такси",
   subtitle: "Мониторинг флота и обработка инцидентов",
   facts: [

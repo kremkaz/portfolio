@@ -14,7 +14,7 @@ function bustimeImage(stage: number, block: number, image = 0): CaseImage {
 export const bustimeEn: CaseStudy = {
   ...bustime,
   backLabel: "Back to case studies",
-  backHref: "/en#cases",
+  backHref: "/en",
   title: "Bustime — public transport tracking",
   subtitle: "Tracking buses and more, anywhere in the world",
   facts: [
