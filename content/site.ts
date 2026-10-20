@@ -34,7 +34,7 @@ export const profileIcon = {
  * размытый фон. При замене фото пересобрать этот файл.
  */
 export const profilePreview = {
-  src: "/home/evgenia-artyushina-portrait-preview.jpg",
+  src: "/home/evgenia-artyushina-portrait-thumb.jpg",
   width: 480,
   height: 480,
 };
