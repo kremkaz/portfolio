@@ -8,7 +8,7 @@ export const vecta: CaseStudy = {
   subtitle: "Мониторинг флота и обработка инцидентов",
   facts: [
     { label: "Роль", value: "UI-UX дизайнер" },
-    { label: "Инструменты", value: "Figma, Perplexity" },
+    { label: "Инструменты", value: "Figma, Claude" },
     { label: "Платформа", value: "desktop" },
   ],
   cover: {

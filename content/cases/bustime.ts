@@ -12,7 +12,7 @@ export const bustime: CaseStudy = {
   subtitle: "Просмотр автобусов и не только по всему миру",
   facts: [
     { label: "Роль", value: "продуктовый дизайнер" },
-    { label: "Инструменты", value: "в процессе" },
+    { label: "Инструменты", value: "Figma, FigJam, Pathway, Claude" },
     { label: "Платформа", value: "mobile" },
   ],
   stages: [

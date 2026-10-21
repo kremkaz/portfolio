@@ -13,7 +13,7 @@ export const vectaEn: CaseStudy = {
   title: "Vecta — a service for robotaxi engineers",
   facts: [
     { label: "Role", value: "UI/UX designer" },
-    { label: "Tools", value: "Figma, Perplexity" },
+    { label: "Tools", value: "Figma, Claude" },
     { label: "Platform", value: "Desktop" },
   ],
   subtitle: "Fleet monitoring and incident management",

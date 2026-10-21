@@ -21,7 +21,7 @@ export const bustimeEn: CaseStudy = {
   subtitle: "Tracking buses and more, anywhere in the world",
   facts: [
     { label: "Role", value: "product designer" },
-    { label: "Tools", value: "in progress" },
+    { label: "Tools", value: "Figma, FigJam, Pathway, Claude" },
     { label: "Platform", value: "mobile" },
   ],
   stages: [
