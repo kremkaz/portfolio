@@ -19,7 +19,7 @@ export type CaseStageBlock =
   /** narrow — картинка по центру в узкой колонке (для высоких схем). */
   | { type: "image"; image: CaseImage; bordered?: boolean; narrow?: boolean }
   /** Несколько одинаковых плиток в ряд, по клику открываются на весь экран с листанием между ними. */
-  | { type: "images"; images: CaseImage[]; bordered?: boolean }
+  | { type: "images"; images: CaseImage[]; bordered?: boolean; natural?: boolean }
   | { type: "stats"; items: CaseStat[] }
   | { type: "list"; items: CaseParagraph[]; ordered?: boolean };
 

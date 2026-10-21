@@ -251,11 +251,15 @@ export function ZoomableImage({
 export function ZoomableImageGrid({
   images,
   bordered = true,
+  natural = false,
 }: {
   images: CaseImage[];
   bordered?: boolean;
+  /** Плитки в пропорциях самих картинок (например, скриншоты телефона), без обрезки. */
+  natural?: boolean;
 }) {
   const [index, setIndex] = useState<number | null>(null);
+  const first = images[0];
   // 3 картинки — в один ряд, 2 или 4 — по две в ряд (сетка 2×2).
   const cols = images.length === 3 ? "grid-cols-3" : "grid-cols-2";
 
@@ -268,7 +272,8 @@ export function ZoomableImageGrid({
             type="button"
             onClick={() => setIndex(i)}
             aria-label={image.alt}
-            className={`relative aspect-[3/4] w-full cursor-zoom-in overflow-hidden rounded-2xl bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] ${
+            style={natural ? { aspectRatio: `${first.width} / ${first.height}` } : undefined}
+            className={`relative ${natural ? "" : "aspect-[3/4]"} w-full cursor-zoom-in overflow-hidden rounded-2xl bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] ${
               bordered ? "border border-[#ECECEC]" : ""
             }`}
           >

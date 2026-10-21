@@ -134,7 +134,7 @@ export function CaseBlocks({ blocks }: { blocks: CaseStageBlock[] }) {
           />
         )}
         {block.type === "images" && (
-          <ZoomableImageGrid images={block.images} bordered={block.bordered} />
+          <ZoomableImageGrid images={block.images} bordered={block.bordered} natural={block.natural} />
         )}
         {block.type === "stats" && <CaseStats items={block.items} />}
         {block.type === "list" && <CaseList items={block.items} ordered={block.ordered} />}

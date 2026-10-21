@@ -45,6 +45,18 @@ export const bustimeEn: CaseStudy = {
         "The developers' data and the interviews lined up. In Bustime, the most used features are the **transport list** on the home screen and **route planning**. Respondents **also plan routes most often**, and they **check arrivals on the stop's departure board**, either the physical one or in an app.",
         "Since route planning turned out to be the main scenario, I looked at **how it works in similar apps**: Google Maps, Yandex Maps and Yandex Go.",
       ],
+      blocks: [
+        {
+          ...bustime.stages[1].blocks![0],
+          type: "images",
+          natural: true,
+          images: [
+            { ...bustimeImage(1, 0, 0), alt: "Current Bustime: home screen with the tram list" },
+            { ...bustimeImage(1, 0, 1), alt: "Current Bustime: list of bus routes" },
+            { ...bustimeImage(1, 0, 2), alt: "Current Bustime: bus route 3 with stops and vehicles on the line" },
+          ],
+        },
+      ],
     },
     {
       ...bustime.stages[2],
@@ -126,6 +138,10 @@ export const bustimeEn: CaseStudy = {
         {
           type: "paragraph",
           text: "In line with the new navigation, I **added a nav bar**. The transport section got **chips for choosing transport types**. Favorites hold only a few vehicles, so instead of chips there's **a select with one of three options**.",
+        },
+        {
+          type: "paragraph",
+          text: "I also dropped the city chat: after looking at it in several regions, I saw that hardly anyone uses it. An almost empty chat takes up space in the navigation, adds no value and, at this stage of the product, makes the app feel abandoned.",
         },
       ],
     },
