@@ -52,7 +52,7 @@ export const homeEn: HomeContent = {
         title: "Bustime — public transport tracking",
         subtitle: "Tracking buses and more, anywhere in the world",
         description: "Reworking the navigation, plus a little visual polish.",
-        cover: "/home/bustime-card-cover-app.jpg",
+        cover: "/home/bustime-card-cover-app-2.jpg",
         year: "2026",
         status: "published" as CaseStatus,
         href: "/en/cases/bustime",
