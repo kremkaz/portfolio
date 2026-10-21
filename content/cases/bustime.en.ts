@@ -65,25 +65,33 @@ export const bustimeEn: CaseStudy = {
         },
         {
           type: "paragraph",
-          text: "Next, I laid out the core features as a diagram without screens and started **regrouping them**: I wrote every section down on paper and tried different options. Most sections are standard and self-explanatory, so **a card sorting session with 30 participants** was enough to validate the grouping. Based on its results, I put together the final navigation in FigJam.",
+          text: "Next, I **laid out the core features as a diagram without screens** and started regrouping them: I **wrote every section down on paper** and tried different options. Most sections are standard and self-explanatory, so a **card sorting** session with five people I know was enough to check the grouping. The sorting helped settle **where the “Driver mode” feature belongs**: it moved to the advanced settings. It also helped pin down how sections are laid out in Settings → General.",
+        },
+        {
+          type: "paragraph",
+          text: "Separately, I reconsidered the **settings modes: basic, advanced, custom and low-vision.** I dropped the low-vision mode right away. A low-vision user's phone is already set up to help them, and the app's job is not to get in the way, for example by not breaking the screen reader. The other modes are useful, but it's better for users to turn features on themselves, gradually, rather than pick a whole set at once. So I **dropped the modes altogether: by default, users see the basic features**, and the rest is spread across the settings sections and gets turned on as people get to know the product.",
+        },
+        {
+          type: "paragraph",
+          text: "**I put together the final navigation in FigJam.**",
         },
         {
           type: "images",
           images: [
             {
-              ...bustimeImage(2, 3, 0),
+              ...bustimeImage(2, 5, 0),
               alt: "Screen map of the current Bustime app: settings, main flow and multi-select",
             },
             {
-              ...bustimeImage(2, 3, 1),
+              ...bustimeImage(2, 5, 1),
               alt: "Current Bustime information architecture: home with transport types, a bus route and a long menu",
             },
             {
-              ...bustimeImage(2, 3, 2),
+              ...bustimeImage(2, 5, 2),
               alt: "Regrouping on paper: settings sections, profile and favorites sketched by hand",
             },
             {
-              ...bustimeImage(2, 3, 3),
+              ...bustimeImage(2, 5, 3),
               alt: "New information architecture: map, favorites, transport and settings with subsections",
             },
           ],
