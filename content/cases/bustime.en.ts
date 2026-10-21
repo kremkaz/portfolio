@@ -142,7 +142,6 @@ export const bustimeEn: CaseStudy = {
         items: [
           "Go through every feature of the app and design for all of them. So far **the navigation covers only the main sections**; secondary features aren't in it yet.",
           "**Work out the “Driver mode”**: a dashboard where the driver picks their route and tracks themselves along it.",
-          "**Show the redesign** to the Bustime developers and discuss which solutions could be implemented.",
           "**Dig deeper into the product and its metrics.** Understand how the new navigation affects feature discoverability: how often people use previously hidden features, such as the get-off notification, and how long the main scenarios, like route planning, take.",
         ],
       },
