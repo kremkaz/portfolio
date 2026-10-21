@@ -2,6 +2,8 @@ import type { CaseStudy } from "./types";
 import { bustime } from "./bustime";
 import type { CaseImage } from "./types";
 
+const alt = (image: CaseImage | undefined, text: string): CaseImage => ({ ...image!, alt: text });
+
 /** Картинка из русской версии: этап → блок → (для блока «images») номер картинки. */
 function bustimeImage(stage: number, block: number, image = 0): CaseImage {
   const b = bustime.stages[stage].blocks![block];
@@ -128,6 +130,52 @@ export const bustimeEn: CaseStudy = {
       ],
     },
   ],
+  result: {
+    ...bustime.result!,
+    heading: "Result",
+    note: "Click a screenshot to see it full size",
+    after: [
+      { type: "paragraph", text: "**What's next?**" },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Go through every feature of the app and design for all of them. So far **the navigation covers only the main sections**; secondary features aren't in it yet.",
+          "**Work out the “Driver mode”**: a dashboard where the driver picks their route and tracks themselves along it.",
+          "**Show the redesign** to the Bustime developers and discuss which solutions could be implemented.",
+          "**Dig deeper into the product and its metrics.** Understand how the new navigation affects feature discoverability: how often people use previously hidden features, such as the get-off notification, and how long the main scenarios, like route planning, take.",
+        ],
+      },
+    ],
+    flow: [
+      alt(bustime.result!.flow[0], "Map — recent routes (light theme)"),
+      alt(bustime.result!.flow[1], "Map — selected stop (light theme)"),
+      alt(bustime.result!.flow[2], "Transport — all routes (light theme)"),
+      alt(bustime.result!.flow[3], "Route 24 — bus on the line (light theme)"),
+      alt(bustime.result!.flow[4], "Stop — nearest buses (light theme)"),
+      alt(bustime.result!.flow[5], "Favorites — transport, list (light theme)"),
+      alt(bustime.result!.flow[6], "Favorites — transport, tiles (light theme)"),
+      alt(bustime.result!.flow[7], "Favorites — stops, detailed (light theme)"),
+      alt(bustime.result!.flow[8], "Favorites — stops, brief (light theme)"),
+      alt(bustime.result!.flow[9], "Favorites — routes, detailed (light theme)"),
+      alt(bustime.result!.flow[10], "Favorites — routes, brief (light theme)"),
+      alt(bustime.result!.flow[11], "Route — trip options (light theme)"),
+    ],
+    screens: [
+      alt(bustime.result!.screens[0], "Map — recent routes (dark theme)"),
+      alt(bustime.result!.screens[1], "Map — selected stop (dark theme)"),
+      alt(bustime.result!.screens[2], "Transport — all routes (dark theme)"),
+      alt(bustime.result!.screens[3], "Route 24 — bus on the line (dark theme)"),
+      alt(bustime.result!.screens[4], "Stop — nearest buses (dark theme)"),
+      alt(bustime.result!.screens[5], "Favorites — transport, list (dark theme)"),
+      alt(bustime.result!.screens[6], "Favorites — transport, tiles (dark theme)"),
+      alt(bustime.result!.screens[7], "Favorites — stops, detailed (dark theme)"),
+      alt(bustime.result!.screens[8], "Favorites — stops, brief (dark theme)"),
+      alt(bustime.result!.screens[9], "Favorites — routes, detailed (dark theme)"),
+      alt(bustime.result!.screens[10], "Favorites — routes, brief (dark theme)"),
+      alt(bustime.result!.screens[11], "Route — trip options (dark theme)"),
+    ],
+  },
   nextCase: {
     title: "Vecta — a service for robotaxi engineers",
     subtitle: "Fleet monitoring and incident management",
