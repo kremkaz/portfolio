@@ -51,7 +51,7 @@ export const homeEn: HomeContent = {
         tags: ["B2C", "Mobile"],
         title: "Bustime — public transport tracking",
         subtitle: "Tracking buses and more, anywhere in the world",
-        description: "Reworking the navigation, plus a little visual polish.",
+        description: "Navigation redesign and visual design.",
         cover: "/home/bustime-card-cover-app-2.jpg",
         year: "2026",
         status: "published" as CaseStatus,

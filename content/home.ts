@@ -53,7 +53,7 @@ export const cases = {
       tags: ["B2C", "Mobile"],
       title: "Bustime — мониторинг общественного транспорта",
       subtitle: "Просмотр автобусов и не только по всему миру",
-      description: "Переработка навигации + немного визуала.",
+      description: "Переработка навигации и визуал.",
       cover: "/home/bustime-card-cover-app-2.jpg",
       year: "2026",
       status: "published" as CaseStatus,
