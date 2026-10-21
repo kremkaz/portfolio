@@ -54,7 +54,7 @@ export const cases = {
       title: "Bustime — мониторинг общественного транспорта",
       subtitle: "Просмотр автобусов и не только по всему миру",
       description: "Переработка навигации и визуал.",
-      cover: "/home/bustime-card-cover-app-2.jpg",
+      cover: "/home/bustime-card-cover-app-3.jpg",
       year: "2026",
       status: "published" as CaseStatus,
       href: "/cases/bustime",
