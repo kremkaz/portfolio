@@ -9,8 +9,6 @@ const ru = {
   /** Вместо года на карточке кейса в процессе. */
   soon: "soon",
   inProgress: "В разработке",
-  /** Вместо года у кейса, который ещё в работе. */
-  inProcess: "в процессе",
   nextCase: "Следующий кейс",
   backToPortfolio: "Вернуться к портфолио",
   moreScreens: "Больше экранов",
@@ -28,7 +26,6 @@ const en: typeof ru = {
   openProcess: "Process",
   soon: "soon",
   inProgress: "In progress",
-  inProcess: "in progress",
   nextCase: "Next case",
   backToPortfolio: "Back to portfolio",
   moreScreens: "More screens",

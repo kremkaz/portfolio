@@ -102,7 +102,30 @@ export const bustimeEn: CaseStudy = {
       ...bustime.stages[3],
       label: "Visual design",
       heading: "Visual design",
-      paragraphs: ["_The updated visual design and final screens go here._"],
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Navigation was the main focus of this case, but I didn't want to leave it without visuals. So I designed the key screens and adapted them for dark mode.",
+        },
+        { type: "paragraph", text: "**The screens are built around three entities:**" },
+        {
+          type: "list",
+          items: [
+            "**Transport** — where the buses are going.",
+            "**Stop** — which buses pass through a given point.",
+            "**Route** — how to get from A to B.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Each entity can be shown **as cards or as a list**. The format is chosen in the settings of each screen, so users decide what works best for them.",
+        },
+        {
+          type: "paragraph",
+          text: "In line with the new navigation, I **added a nav bar**. The transport section got **chips for choosing transport types**. Favorites hold only a few vehicles, so instead of chips there's **a select with one of three options**.",
+        },
+      ],
     },
   ],
   nextCase: {
